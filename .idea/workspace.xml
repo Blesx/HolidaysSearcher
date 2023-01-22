@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="major_project:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.0: import SOFT3202 major project into new repo">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_05_2022_1_29_pm_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_05_2022_1_29_pm__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dates.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/production/resources/raindrops.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/Holiday.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/HolidaysAPIManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/SQLManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/TwilioAPIManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOffline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOnline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/chooseForfeit/ChooseForfeit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/chooseForfeit/ChooseForfeitDefault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/ChooseForfeitWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/MonthPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/Window.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/WorldMapWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/resources/raindrops.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/byte-buddy-1.8.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/byte-buddy-agent-1.8.10.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/checker-qual-3.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/controlsfx-11.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/error_prone_annotations-2.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/failureaccess-1.0.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/gson-2.9.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/guava-30.1.1-jre.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/j2objc-annotations-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2-linux.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-controls-17.0.2-linux.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-controls-17.0.2-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2-linux.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-media-17.0.2-linux.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-media-17.0.2-win.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/jsr305-3.0.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-api-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-engine-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-params-5.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-platform-commons-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-platform-engine-1.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/mockito-core-2.19.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/mockito-junit-jupiter-2.19.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/objenesis-2.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/sqlite-jdbc-3.36.0.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="major_project" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="major_project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="major_project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="major_project" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="283q7AQpkwB2XRFG1Be9lCIQE59" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.28615862" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Xoomoo\Documents\Stuff\Uni\SOFT3202\major_project\app\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="major_project.view" />
+      <recent name="major_project.model" />
+      <recent name="major_project.model.response" />
+      <recent name="major_project.model.calendar.input" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR Application.JAR Run">
+    <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;major_project.AppTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="build clean" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="build clean --warning-mode all" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="offline offline" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="run --args=&quot;offline offline&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="offline online" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="run --args=&quot;offline online&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="online offline" type="GradleRunConfiguration" factoryName="Gradle">
+      <selectedOptions>
+        <option name="external.system.vm.parameters.fragment" />
+      </selectedOptions>
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="run --args=&quot;online offline&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="online online" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <selectedOptions>
+        <option name="external.system.vm.parameters.fragment" />
+      </selectedOptions>
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="run --args=&quot;online online&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="run tests" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="test" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="JAR Run" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Xoomoo\Documents\Stuff\Uni\2022\SOFT3202\major_project" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.online offline" />
+      <item itemvalue="Gradle.offline online" />
+      <item itemvalue="Gradle.offline offline" />
+      <item itemvalue="Gradle.run tests" />
+      <item itemvalue="Gradle.online online" />
+      <item itemvalue="Gradle.build clean" />
+      <item itemvalue="Gradle.AppTest" />
+      <item itemvalue="JAR Application.JAR Run" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.online online" />
+        <item itemvalue="Gradle.AppTest" />
+        <item itemvalue="Gradle.build clean" />
+        <item itemvalue="Gradle.online online" />
+        <item itemvalue="Gradle.build clean" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="" />
+      <created>1650455448433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650455448433</updated>
+    </task>
+    <task id="LOCAL-00001" summary="major: completed basic framework, WorldMapWindow">
+      <created>1650526512460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650526512461</updated>
+    </task>
+    <task id="LOCAL-00002" summary="major: did some CalendarWindow">
+      <created>1650900818184</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650900818184</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ready to submit milestone 1: created calendar, added input api, output api, input/output dummies, test suite (offline)">
+      <created>1651412980150</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651412980150</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ready to submit milestone 1: submit gradle files">
+      <created>1651413267821</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651413267822</updated>
+    </task>
+    <task id="LOCAL-00005" summary="replaced mp3 with wav file">
+      <created>1652772608220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652772608220</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed bug with date formatting">
+      <created>1653368165649</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653368165649</updated>
+    </task>
+    <task id="LOCAL-00007" summary="login and register views">
+      <created>1653960972413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653960972413</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactored app and viewmanager input/output models">
+      <created>1653983789931</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653983789931</updated>
+    </task>
+    <task id="LOCAL-00009" summary="separated music functions into musicmanager class">
+      <created>1654074743626</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654074743626</updated>
+    </task>
+    <task id="LOCAL-00010" summary="integrated empty login and register models">
+      <created>1654076397555</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654076397555</updated>
+    </task>
+    <task id="LOCAL-00011" summary="defined dummy login and register models">
+      <created>1654081508931</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654081508931</updated>
+    </task>
+    <task id="LOCAL-00012" summary="milestone 2 resubmission: refactored way cache hits and view works for all apis">
+      <created>1654407837981</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654407837981</updated>
+    </task>
+    <task id="LOCAL-00013" summary="milestone 2 resubmission v0.1: cleared cache before submitting">
+      <created>1654407930012</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654407930012</updated>
+    </task>
+    <task id="LOCAL-00014" summary="milestone 2 resubmission v0.2: submitting sha and uri">
+      <created>1654408017128</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654408017128</updated>
+    </task>
+    <task id="LOCAL-00015" summary="exam v1.9: submitting readme file">
+      <created>1655367675564</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1655367675564</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="development" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="major: completed basic framework, WorldMapWindow" />
+    <MESSAGE value="major: did some CalendarWindow" />
+    <MESSAGE value="ready to submit milestone 1: created calendar, added input api, output api, input/output dummies, test suite (offline)" />
+    <MESSAGE value="ready to submit milestone 1: submit gradle files" />
+    <MESSAGE value="replaced mp3 with wav file" />
+    <MESSAGE value="fixed bug with date formatting" />
+    <MESSAGE value="login and register views" />
+    <MESSAGE value="refactored app and viewmanager input/output models" />
+    <MESSAGE value="separated music functions into musicmanager class" />
+    <MESSAGE value="integrated empty login and register models" />
+    <MESSAGE value="defined dummy login and register models" />
+    <MESSAGE value="milestone 2 resubmission: refactored way cache hits and view works for all apis" />
+    <MESSAGE value="milestone 2 resubmission v0.1: cleared cache before submitting" />
+    <MESSAGE value="milestone 2 resubmission v0.2: submitting sha and uri" />
+    <MESSAGE value="exam v1.9: submitting readme file" />
+    <MESSAGE value="v2.0: import SOFT3202 major project into new repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.0: import SOFT3202 major project into new repo" />
+  </component>
+</project>
