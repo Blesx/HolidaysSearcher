@@ -1,58 +1,11 @@
 <h1>Holidays/Twilio API Implementation</h1>
 
-Test commit: check the committer is Blesx and not Christian Mo
+Lookup holidays dates for any country using the <a href ="https://app.abstractapi.com/api/holidays/tester">Abstract 
+Holidays API</a>. It provides a simple user interface and some fun features like word matching and sending an SMS of
+holiday dates to your phone!
 
-<h3>Submission Info</h3>
-
-Input API: Holidays
-
-Output API: Twilio
-
-Claimed Tier: Credit
-
-Credit Optional Feature 1: Help feature
-
-Credit Optional Feature 2: Theme song
-
-Distinction Optional Feature: N/A
-
-High Distinction Optional Feature: N/A
-
-Milestone 1 Submission:
-
-SHA: c54eae0437ff51df60faf418412939cccd656315
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/c54eae0437ff51df60faf418412939cccd656315
-
-Milestone 1 Re-Submission (didn't have to resubmit):
-
-SHA: c54eae0437ff51df60faf418412939cccd656315
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/c54eae0437ff51df60faf418412939cccd656315
-
-Milestone 2 Submission:
-
-SHA: 705ba5e53612c3745da54a691b92fdd1d9d033b1
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/705ba5e53612c3745da54a691b92fdd1d9d033b1
-
-Milestone 2 Re-Submission:
-
-SHA: 81204a910a98dbe8d751e5a5b39f589c443db130 
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/81204a910a98dbe8d751e5a5b39f589c443db130
-
-Exam Base Commit:
-
-SHA: 81204a910a98dbe8d751e5a5b39f589c443db130
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/81204a910a98dbe8d751e5a5b39f589c443db130
-
-Exam Submission Commit:
-
-SHA: a040586073833c3aefd6d45ec7e179c97d206544
-
-URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/a040586073833c3aefd6d45ec7e179c97d206544
+This project was inherited from a university project, the previous repository can be found here (only available via 
+a private DM): https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/a040586073833c3aefd6d45ec7e179c97d206544
 
 <h3>Run Program Instructions</h3>
 
@@ -74,12 +27,6 @@ URI: https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/a040586073833c3aefd6d4
 - SQL/cache
 - 'Help' feature
 - Music feature
-
-<h3>Present Level of Features</h3>
-
-- Hurdle
-- Pass
-- Credit
 
 <h3>Citations - Not Written</h3>
 

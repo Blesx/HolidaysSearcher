@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.0: import SOFT3202 major project into new repo">
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v1.0 test: added statement in README file to check committer account">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
