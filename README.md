@@ -1,53 +1,46 @@
-<h1>Holidays/Twilio API Implementation</h1>
+<h1>HolidaysSearcher</h1>
 
-Lookup holidays dates for any country using the <a href ="https://app.abstractapi.com/api/holidays/tester">Abstract 
-Holidays API</a>. It provides a simple user interface and some fun features like word matching and sending an SMS of
-holiday dates to your phone!
-
-This project was inherited from a university project, the previous repository can be found here (only available via 
-a private DM): https://github.sydney.edu.au/chmo6791/SCD2_2022/tree/a040586073833c3aefd6d45ec7e179c97d206544
+Lookup holidays dates for any country using the <a href = "https://www.abstractapi.com/api/holidays-api">Abstract 
+Holidays API</a>!
 
 <h3>Run Program Instructions</h3>
 
-- Use gradle run with the proper arguments. Currently accepted commands with arguments are:
-  - gradle run --args="online online"
-  - gradle run --args="online offline"
-  - gradle run --args="offline online"
-  - gradle run --args="offline offline"
-- Twilio phone numbers: no '+' in env variables, just numbers
-- Help function: press 'CTRL' + click on any selectable element (button, cell etc.) to get more information about it
+At the moment users require an <a href = "https://www.abstractapi.com/api/holidays-api">Abstract API</a> and 
+<a href = "https://www.twilio.com/">Twilio</a> account to run the application.
+
+1. Configure some environmental variables:
+   - Abstract API
+     - **VARIABLE NAME**: INPUT_API_KEY, **VARIABLE VALUE**: paste your <a href="https://app.abstractapi.com/api/holidays/tester"> primary key</a> here
+   - Twilio API: all these values can be found on the <a href = "https://console.twilio.com/">Twilio console</a> after logging in.
+     - **VARIABLE NAME**: TWILIO_API_FROM, **VARIABLE VALUE**: your free issued Twilio phone number
+     - **VARIABLE NAME**: TWILIO_API_KEY, **VARIABLE VALUE**: your secret auth token
+     - **VARIABLE NAME**: TWILIO_API_SID, **VARIABLE VALUE**: your account SID
+     - **VARIABLE NAME**: TWILIO_API_TO, **VARIABLE VALUE**: the phone number you want to send messages to
+2. Run in 2 ways:
+   1. Run using gradle
+      - gradle run --args="online online"
+      - gradle run --args="online offline"
+      - gradle run --args="offline online"
+      - gradle run --args="offline offline"
+   2. Navigate to the _HolidaysSearcher\out\artifacts\major_project_jar_ directory and run startAppScript.sh. It loads the application with online capabilities
 
 <h3>Current features</h3>
 
-- Input API
-- Output API
-- Dummy input & output
-- MV design
-- Test suite
-- SQL/cache
-- 'Help' feature
-- Music feature
+- REST API integration
+  - <a href = "https://www.abstractapi.com/api/holidays-api">Abstract Holidays API</a>
+  - <a href = "https://www.twilio.com/">Twilio</a>
+- <a href = "https://www.sqlite.org/index.html">SQLite</a> cache integration
+- Model-view (MV) design
+- TDD practices
+- Extras
+  - Theme music
+  - Word matcher
+  - Help function
 
-<h3>Citations - Not Written</h3>
+<h3>To Do</h3>
 
-- line 66: InputCalendarOnline.java
-  - usage: to parse json arrays with no name
-  - source: https://stackoverflow.com/questions/13736122/using-gson-to-parse-json-array-and-object-with-no-name
-- lines 141-155: CalendarWindow.java
-  - usage: set row and column width/height for cells
-  - source: https://stackoverflow.com/questions/57927816/how-to-make-all-cells-in-gridpane-visible-and-same-size
-- lines 40-42: OutputCalendarOnline.java
-  - usage: set authorization header for Twilio POST request
-  - source: https://docs.agora.io/en/All/faq/restful_authentication
-- line 166: CalendarWindow.java; line: 70 WorldMapWindow.java
-  - usage: check if mediaplayer is playing song
-  - source: https://stackoverflow.com/questions/18340125/how-to-tell-if-mediaplayer-is-playing
-- resource: /src/main/resources/raindrops.mp3
-  - usage: music for theme song
-  - source: https://www.youtube.com/watch?v=sySlY1XKlhM
-
-<h3>Citations - Written</h3>
-
-- lines 50-61: InputCalendarOnline()
-  - usage: similar structure for managing http request and response from HelloHTTP example & task2
-  - source: HelloHTTP.java module 5, all models for task2
+1. Move word matcher
+   1. Make it optional
+   2. Move to new tab in the UI (make country page first again)
+2. Let user choose online/offline mode on app opening
+3. Package database/jar into more accessible area
