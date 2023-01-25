@@ -39,7 +39,7 @@ javafx {
 
 application {
     // Define the main class for the application.
-    mainClass = 'major_project.App'
+    mainClass = 'major_project.Launcher'
 }
 
 tasks.named('test') {

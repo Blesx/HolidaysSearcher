@@ -9,9 +9,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v1.0 test: added statement in README file to check committer account">
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.0.1: updated README file">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/major_project_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/Launcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/startAppScript.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/byte-buddy-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/byte-buddy-agent-1.8.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/checker-qual-3.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/controlsfx-11.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/error_prone_annotations-2.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/failureaccess-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/gson-2.9.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/guava-30.1.1-jre.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/j2objc-annotations-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-base-17.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-controls-17.0.2-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-controls-17.0.2-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-graphics-17.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-media-17.0.2-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/javafx-media-17.0.2-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/jsr305-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-engine-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-jupiter-params-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-platform-commons-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/junit-platform-engine-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/mockito-core-2.19.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/mockito-junit-jupiter-2.19.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/objenesis-2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/opentest4j-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/sqlite-jdbc-3.36.0.3.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +136,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Unfinished/InvoicerND" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28615862" />
@@ -115,7 +153,7 @@
       <recent name="major_project.model.calendar.input" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.JAR Run">
+  <component name="RunManager" selected="Gradle.online offline">
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -257,14 +295,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="JAR Run" type="JarApplication">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Xoomoo\Documents\Stuff\Uni\2022\SOFT3202\major_project" />
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <method v="2">
-        <option name="BuildArtifacts" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Gradle.online offline" />
       <item itemvalue="Gradle.offline online" />
@@ -273,7 +303,6 @@
       <item itemvalue="Gradle.online online" />
       <item itemvalue="Gradle.build clean" />
       <item itemvalue="Gradle.AppTest" />
-      <item itemvalue="JAR Application.JAR Run" />
     </list>
     <recent_temporary>
       <list>
@@ -406,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674369344040</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="v2.0.1: updated README file">
+      <created>1674436688643</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674436688643</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,6 +501,7 @@
     <MESSAGE value="milestone 2 resubmission v0.2: submitting sha and uri" />
     <MESSAGE value="exam v1.9: submitting readme file" />
     <MESSAGE value="v2.0: import SOFT3202 major project into new repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.0: import SOFT3202 major project into new repo" />
+    <MESSAGE value="v2.0.1: updated README file" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.0.1: updated README file" />
   </component>
 </project>
