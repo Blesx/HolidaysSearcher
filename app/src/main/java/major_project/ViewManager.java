@@ -4,9 +4,6 @@ import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import major_project.model.calendar.input.InputCalendar;
 import major_project.model.calendar.output.OutputCalendar;
-import major_project.model.chooseForfeit.ChooseForfeit;
-import major_project.model.chooseForfeit.ChooseForfeitDefault;
-import major_project.view.ChooseForfeitWindow;
 import major_project.view.Window;
 import major_project.view.WorldMapWindow;
 
@@ -30,7 +27,7 @@ public class ViewManager {
         this.viewWidth = viewWidth;
         this.viewHeight = viewHeight;
 
-        currentView = new ChooseForfeitWindow(this, new ChooseForfeitDefault(), mediaPlayer);
+        currentView = new WorldMapWindow(this, mediaPlayer);
         setScene(currentView);
 
     }

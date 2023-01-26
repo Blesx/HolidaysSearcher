@@ -39,8 +39,9 @@ At the moment users require an <a href = "https://www.abstractapi.com/api/holida
 
 <h3>To Do</h3>
 
-1. Move word matcher
+1. Remove word matcher & make country page first **(DONE!)**
+2. Refactor test suite **(ONGOING)**
+3. Place word matcher in new tab
    1. Make it optional
-   2. Move to new tab in the UI (make country page first again)
-2. Let user choose online/offline mode on app opening
-3. Package database/jar into more accessible area
+4. Let user choose online/offline mode on app opening
+5. Package database/jar into more accessible area

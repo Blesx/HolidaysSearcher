@@ -78,7 +78,6 @@ public class DayCell extends VBox {
                     }
                     createDescriptionAlert();
                     setColor();
-                    checkHolidaysMatchForfeit(holidays);
                     return;
 
                 }
@@ -108,7 +107,6 @@ public class DayCell extends VBox {
 
             }
             createDescriptionAlert();
-            checkHolidaysMatchForfeit(holidays);
 
         } else {
             isHoliday = false;
