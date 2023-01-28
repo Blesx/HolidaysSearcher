@@ -1,7 +1,7 @@
 <h1>HolidaysSearcher</h1>
 
 Lookup holidays dates for any country using the <a href = "https://www.abstractapi.com/api/holidays-api">Abstract 
-Holidays API</a>!
+Holidays API</a>! Current build is v2.1.0.
 
 <h3>Run Program Instructions</h3>
 
@@ -24,7 +24,7 @@ At the moment users require an <a href = "https://www.abstractapi.com/api/holida
       - gradle run --args="offline offline"
    2. Navigate to the _HolidaysSearcher\out\artifacts\major_project_jar_ directory and run startAppScript.sh. It loads the application with online capabilities
 
-<h3>Current features</h3>
+<h3>Current Features - v2.1.0</h3>
 
 - REST API integration
   - <a href = "https://www.abstractapi.com/api/holidays-api">Abstract Holidays API</a>
@@ -37,11 +37,8 @@ At the moment users require an <a href = "https://www.abstractapi.com/api/holida
   - Word matcher
   - Help function
 
-<h3>To Do</h3>
+<h3>Upcoming Features - v2.2.0</h3>
 
-1. Remove word matcher & make country page first **(DONE!)**
-2. Refactor test suite **(ONGOING)**
-3. Place word matcher in new tab
-   1. Make it optional
-4. Let user choose online/offline mode on app opening
-5. Package database/jar into more accessible area
+1. Updated UI!
+2. Can choose between online/offline mode an app opening
+3. Easier way to access program (concept stage)

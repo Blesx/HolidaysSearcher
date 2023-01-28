@@ -9,12 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.1: updated README file">
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.2: set opening window as country selection page">
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/ChooseForfeitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674629843817</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="v2.1.2: set opening window as country selection page">
+      <created>1674697830894</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674697830895</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,6 +496,7 @@
     <MESSAGE value="v2.0.1: updated README file" />
     <MESSAGE value="v2.1.0: deployed project as jar with Launcher class" />
     <MESSAGE value="v2.1.1: updated README file" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.1: updated README file" />
+    <MESSAGE value="v2.1.2: set opening window as country selection page" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.2: set opening window as country selection page" />
   </component>
 </project>

@@ -109,9 +109,9 @@ public class InputCalendarOffline implements InputCalendar {
 
     private void buildRUList() {
         holidaysRU = new ArrayList<>();
-        holidaysRU.add(new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "5/20/2022", "2022", "5", "20", "Thursday"));
-        holidaysRU.add(new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "5/24/2022", "2022", "5", "24", "Monday"));
-        holidaysRU.add(new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "5/20/2022", "2022", "5", "20", "Thursday"));
+        holidaysRU.add(new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "1/20/2023", "2023", "1", "20", "Thursday"));
+        holidaysRU.add(new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "1/24/2023", "2023", "1", "24", "Monday"));
+        holidaysRU.add(new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "1/20/2023", "2023", "1", "20", "Thursday"));
 
     }
 
