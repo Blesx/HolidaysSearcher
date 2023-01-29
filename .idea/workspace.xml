@@ -9,18 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.2: set opening window as country selection page">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/ChooseForfeitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" afterDir="false" />
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.3: organized tests into multiple classes">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/WordMatcherDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dates.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/dates.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/chooseForfeit/ChooseForfeit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/chooseForfeit/ChooseForfeitDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/WordMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/ChooseForfeitWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/ChooseForfeitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,7 @@
       <recent name="major_project.model.calendar.input" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.offline offline">
+  <component name="RunManager" selected="Gradle.run tests">
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -434,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674697830895</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="v2.1.3: organized tests into multiple classes">
+      <created>1674879143997</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674879143997</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,6 +488,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="major: completed basic framework, WorldMapWindow" />
     <MESSAGE value="major: did some CalendarWindow" />
     <MESSAGE value="ready to submit milestone 1: created calendar, added input api, output api, input/output dummies, test suite (offline)" />
@@ -497,6 +511,7 @@
     <MESSAGE value="v2.1.0: deployed project as jar with Launcher class" />
     <MESSAGE value="v2.1.1: updated README file" />
     <MESSAGE value="v2.1.2: set opening window as country selection page" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.2: set opening window as country selection page" />
+    <MESSAGE value="v2.1.3: organized tests into multiple classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.3: organized tests into multiple classes" />
   </component>
 </project>

@@ -1,9 +1,8 @@
 package major_project;
 
 import major_project.model.Holiday;
+import major_project.model.WordMatcher;
 import major_project.model.calendar.input.InputCalendarOffline;
-import major_project.model.chooseForfeit.ChooseForfeit;
-import major_project.model.chooseForfeit.ChooseForfeitDefault;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,12 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DummyInputTest extends BaseTest {
     InputCalendarOffline inputOffline;
-    ChooseForfeit chooseForfeit;
+    WordMatcher wordMatcher;
 
     @BeforeEach
     void setupModels() {
         inputOffline = new InputCalendarOffline();
-        chooseForfeit = new ChooseForfeitDefault();
+        wordMatcher = new WordMatcher();
 
     }
 
@@ -89,44 +88,44 @@ public class DummyInputTest extends BaseTest {
     }
 
     @Test
-    void dummyInput_checkHolidaysMatchForfeit_NoMatches_ReturnedFalse() {
+    void dummyInput_checkHolidaysMatchWord_NoMatches_ReturnedFalse() {
         String toMatch = "apy";
-        chooseForfeit.setForfeitString(inputOffline, toMatch);
+        wordMatcher.setWord(inputOffline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(happyDay);
         holidays.add(jubilantDay);
 
-        assertFalse(inputOffline.checkHolidaysMatchForfeit(holidays));
+        assertFalse(inputOffline.checkHolidaysMatchWord(holidays));
 
     }
 
     @Test
-    void dummyInput_checkHolidaysMatchForfeit_MatchFound_ReturnedTrue() {
+    void dummyInput_checkHolidaysMatchWord_MatchFound_ReturnedTrue() {
         String toMatch = "# 9";
-        chooseForfeit.setForfeitString(inputOffline, toMatch);
+        wordMatcher.setWord(inputOffline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(crazyDay);
 
-        assertTrue(inputOffline.checkHolidaysMatchForfeit(holidays));
+        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
 
         String toMatch2 = "&&#$";
-        chooseForfeit.setForfeitString(inputOffline, toMatch2);
-        assertTrue(inputOffline.checkHolidaysMatchForfeit(holidays));
+        wordMatcher.setWord(inputOffline, toMatch2);
+        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
 
     }
 
     @Test
-    void dummyInput_checkHolidaysMatchForfeit2_MatchFound_ReturnedTrue() {
+    void dummyInput_checkHolidaysMatchWord2_MatchFound_ReturnedTrue() {
         String toMatch = "jubilant";
-        chooseForfeit.setForfeitString(inputOffline, toMatch);
+        wordMatcher.setWord(inputOffline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(happyDay);
         holidays.add(jubilantDay);
 
-        assertTrue(inputOffline.checkHolidaysMatchForfeit(holidays));
+        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
 
     }
 

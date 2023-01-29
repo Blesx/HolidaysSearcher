@@ -11,6 +11,7 @@ import javafx.scene.text.Font;
 import major_project.ViewManager;
 import major_project.model.calendar.input.InputCalendar;
 import major_project.model.calendar.output.OutputCalendar;
+import major_project.view.menu.WordMatcherDialog;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -24,6 +25,11 @@ public class CalendarWindow implements Window {
     private final MediaPlayer mediaPlayer;
     private Scene scene;
 
+    // menu elements
+    private MenuBar menuBar;
+    private Menu optionsMenu;
+    private MenuItem wordMatcherMenuItem;
+
     // left elements
     private Label calendarLabel;
     private Label countryLabel;
@@ -31,8 +37,8 @@ public class CalendarWindow implements Window {
     private MonthPane currentMonthPane;
     private VBox calendarVBox;
 
-    private Label forfeitWordLabel;
-    private VBox forfeitWordVBox;
+    private Label wordToMatchLabel;
+    private VBox wordToMatchVBox;
 
     private VBox leftVBox;
 
@@ -47,7 +53,9 @@ public class CalendarWindow implements Window {
     private Button musicButton;
     private VBox rightVBox;
 
+    // layout elements
     private SplitPane splitPane;
+    private VBox windowVBox;
 
     private final Insets vBoxPadding = new Insets(30, 30, 30, 30);
     private final Insets hBoxPadding = new Insets(30, 30, 30, 30);
@@ -63,6 +71,18 @@ public class CalendarWindow implements Window {
     }
 
     private void drawScene() {
+        // menu elements
+        wordMatcherMenuItem = new MenuItem("Word matcher");
+        wordMatcherMenuItem.setOnAction(event -> {
+            new WordMatcherDialog(manager, this);
+
+        });
+
+        optionsMenu = new Menu("Options");
+        optionsMenu.getItems().add(wordMatcherMenuItem);
+        menuBar = new MenuBar();
+        menuBar.getMenus().add(optionsMenu);
+
         // left elements
         countryLabel = new Label(inputModel.getCountryAbv());
         countryLabel.setFont(new Font(manager.getDefaultFontSize()));
@@ -78,14 +98,14 @@ public class CalendarWindow implements Window {
         calendarVBox.setPadding(vBoxPadding);
         calendarVBox.setSpacing(vBoxSpacing);
 
-        forfeitWordLabel = new Label("Forfeit word: " + inputModel.getForfeitWord());
-        forfeitWordLabel.setFont(new Font(manager.getDefaultFontSize()));
+        wordToMatchLabel = new Label("Word to match: " + inputModel.getWordToMatch());
+        wordToMatchLabel.setFont(new Font(manager.getDefaultFontSize()));
 
-        forfeitWordVBox = new VBox(forfeitWordLabel);
-        forfeitWordVBox.setSpacing(vBoxSpacing);
-        forfeitWordVBox.setAlignment(Pos.CENTER);
+        wordToMatchVBox = new VBox(wordToMatchLabel);
+        wordToMatchVBox.setSpacing(vBoxSpacing);
+        wordToMatchVBox.setAlignment(Pos.CENTER);
 
-        leftVBox = new VBox(calendarVBox, forfeitWordVBox);
+        leftVBox = new VBox(calendarVBox, wordToMatchVBox);
         leftVBox.setSpacing(vBoxSpacing);
         leftVBox.setAlignment(Pos.CENTER);
 
@@ -196,11 +216,13 @@ public class CalendarWindow implements Window {
         rightVBox.setPadding(vBoxPadding);
         rightVBox.setSpacing(vBoxSpacing);
 
-        // layout
+        // window layout
         splitPane = new SplitPane();
         splitPane.getItems().addAll(leftVBox, rightVBox);
 
-        scene = new Scene(splitPane, manager.getViewWidth(), manager.getViewHeight());
+        windowVBox = new VBox(menuBar, splitPane);
+
+        scene = new Scene(windowVBox, manager.getViewWidth(), manager.getViewHeight());
 
     }
 
@@ -277,6 +299,11 @@ public class CalendarWindow implements Window {
         alert.getDialogPane().setMaxWidth(500);
         alert.setHeaderText(message);
         alert.showAndWait();
+
+    }
+
+    public void setWordToMatchLabel() {
+        wordToMatchLabel.setText("Word to match: " + inputModel.getWordToMatch());
 
     }
 

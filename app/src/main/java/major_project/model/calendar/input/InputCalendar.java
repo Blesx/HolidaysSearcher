@@ -72,18 +72,18 @@ public interface InputCalendar {
     void deleteRecord(LocalDate date);
 
     /**
-     * Sets a forfeit word
+     * Sets a word to match
      */
-    void setForfeitWord(String word);
+    void setWordToMatch(String word);
 
     /**
-     * Gets the forfeit word
+     * Gets the word to match
      */
-    String getForfeitWord();
+    String getWordToMatch();
 
     /**
-     * Checks if any holidays match with the forfeit word
+     * Checks if any holidays match with the word to match
      */
-    boolean checkHolidaysMatchForfeit(List<Holiday> holidays);
+    boolean checkHolidaysMatchWord(List<Holiday> holidays);
 
 }

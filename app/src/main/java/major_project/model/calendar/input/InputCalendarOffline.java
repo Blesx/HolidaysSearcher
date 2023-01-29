@@ -9,7 +9,7 @@ import java.util.List;
 
 public class InputCalendarOffline implements InputCalendar {
     private String countryAbv;
-    private String forfeitWord;
+    private String wordToMatch = "No word to match set";
 
     private final LocalDate minDate = LocalDate.of(1970, 1, 1);
     private final LocalDate maxDate = LocalDate.of(2037, 12, 31);
@@ -205,25 +205,25 @@ public class InputCalendarOffline implements InputCalendar {
     }
 
     @Override
-    public void setForfeitWord(String word) {
-        forfeitWord = word;
+    public void setWordToMatch(String word) {
+        wordToMatch = word;
 
     }
 
     @Override
-    public String getForfeitWord() {
-        return forfeitWord;
+    public String getWordToMatch() {
+        return wordToMatch;
 
     }
 
     @Override
-    public boolean checkHolidaysMatchForfeit(List<Holiday> holidays) {
-        String lowercaseForfeitWord = forfeitWord.toLowerCase();
+    public boolean checkHolidaysMatchWord(List<Holiday> holidays) {
+        String lowerCaseWordToMatch = wordToMatch.toLowerCase();
 
         for (Holiday holiday : holidays) {
             String holidayName = holiday.getName().toLowerCase();
 
-            if (holidayName.contains(lowercaseForfeitWord)) {
+            if (holidayName.contains(lowerCaseWordToMatch)) {
                 return true;
 
             }

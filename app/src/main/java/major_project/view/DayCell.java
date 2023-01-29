@@ -77,6 +77,7 @@ public class DayCell extends VBox {
 
                     }
                     createDescriptionAlert();
+                    checkHolidaysMatchWord(holidays);
                     setColor();
                     return;
 
@@ -107,6 +108,7 @@ public class DayCell extends VBox {
 
             }
             createDescriptionAlert();
+            checkHolidaysMatchWord(holidays);
 
         } else {
             isHoliday = false;
@@ -140,8 +142,8 @@ public class DayCell extends VBox {
 
     }
 
-    private void checkHolidaysMatchForfeit(List<Holiday> holidays) {
-        if (inputModel.checkHolidaysMatchForfeit(holidays)) {
+    private void checkHolidaysMatchWord(List<Holiday> holidays) {
+        if (inputModel.checkHolidaysMatchWord(holidays)) {
             createMatchFoundAlert();
 
         }
@@ -152,7 +154,7 @@ public class DayCell extends VBox {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.getDialogPane().setMaxWidth(500);
         alert.setTitle("Match found!");
-        alert.setHeaderText("This holiday contains the forfeit word!");
+        alert.setHeaderText("This holiday contains the chosen word!");
         alert.showAndWait();
 
     }

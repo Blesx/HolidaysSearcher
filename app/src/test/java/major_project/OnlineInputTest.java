@@ -3,9 +3,8 @@ package major_project;
 import major_project.model.Holiday;
 import major_project.model.HolidaysAPIManager;
 import major_project.model.SQLManager;
+import major_project.model.WordMatcher;
 import major_project.model.calendar.input.InputCalendarOnline;
-import major_project.model.chooseForfeit.ChooseForfeit;
-import major_project.model.chooseForfeit.ChooseForfeitDefault;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +22,7 @@ public class OnlineInputTest extends BaseTest {
     InputCalendarOnline inputOnline;
     HolidaysAPIManager holidaysAPIManager;
     SQLManager sqlManager;
-    ChooseForfeit chooseForfeit;
+    WordMatcher wordMatcher;
 
     final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
@@ -32,7 +31,7 @@ public class OnlineInputTest extends BaseTest {
         holidaysAPIManager = mock(HolidaysAPIManager.class);
         sqlManager = mock(SQLManager.class);
         inputOnline = new InputCalendarOnline(holidaysAPIManager, sqlManager);
-        chooseForfeit = new ChooseForfeitDefault();
+        wordMatcher = new WordMatcher();
 
     }
 
@@ -116,44 +115,44 @@ public class OnlineInputTest extends BaseTest {
     }
 
     @Test
-    void onlineInput_checkHolidaysMatchForfeit_NoMatches_ReturnedFalse() {
+    void onlineInput_checkHolidaysMatchWord_NoMatches_ReturnedFalse() {
         String toMatch = "apy";
-        chooseForfeit.setForfeitString(inputOnline, toMatch);
+        wordMatcher.setWord(inputOnline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(happyDay);
         holidays.add(jubilantDay);
 
-        assertFalse(inputOnline.checkHolidaysMatchForfeit(holidays));
+        assertFalse(inputOnline.checkHolidaysMatchWord(holidays));
 
     }
 
     @Test
-    void onlineInput_checkHolidaysMatchForfeit_MatchFound_ReturnedTrue() {
+    void onlineInput_checkHolidaysMatchWord_MatchFound_ReturnedTrue() {
         String toMatch = "# 9";
-        chooseForfeit.setForfeitString(inputOnline, toMatch);
+        wordMatcher.setWord(inputOnline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(crazyDay);
 
-        assertTrue(inputOnline.checkHolidaysMatchForfeit(holidays));
+        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
 
         String toMatch2 = "&&#$";
-        chooseForfeit.setForfeitString(inputOnline, toMatch2);
-        assertTrue(inputOnline.checkHolidaysMatchForfeit(holidays));
+        wordMatcher.setWord(inputOnline, toMatch2);
+        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
 
     }
 
     @Test
-    void onlineInput_checkHolidaysMatchForfeit2_MatchFound_ReturnedTrue() {
+    void onlineInput_checkHolidaysMatchWord2_MatchFound_ReturnedTrue() {
         String toMatch = "jubilant";
-        chooseForfeit.setForfeitString(inputOnline, toMatch);
+        wordMatcher.setWord(inputOnline, toMatch);
 
         List<Holiday> holidays = new ArrayList<>();
         holidays.add(happyDay);
         holidays.add(jubilantDay);
 
-        assertTrue(inputOnline.checkHolidaysMatchForfeit(holidays));
+        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
 
     }
 
