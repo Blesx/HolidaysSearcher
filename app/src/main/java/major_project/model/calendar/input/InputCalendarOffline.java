@@ -1,6 +1,7 @@
 package major_project.model.calendar.input;
 
 import major_project.model.Holiday;
+import major_project.model.MusicPlayer;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -8,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InputCalendarOffline implements InputCalendar {
+    private final MusicPlayer musicPlayer;
+
     private String countryAbv;
     private String wordToMatch = "No word to match set";
 
@@ -24,6 +27,8 @@ public class InputCalendarOffline implements InputCalendar {
     private List<LocalDate> noHolidays;
 
     public InputCalendarOffline() {
+        musicPlayer = new MusicPlayer();
+
         datesWithHolidays = new ArrayList<>();
         noHolidays = new ArrayList<>();
 
@@ -244,6 +249,12 @@ public class InputCalendarOffline implements InputCalendar {
         }
 
         return false;
+
+    }
+
+    @Override
+    public MusicPlayer getMusicPlayer() {
+        return musicPlayer;
 
     }
 

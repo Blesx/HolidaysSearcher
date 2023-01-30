@@ -2,7 +2,6 @@ package major_project;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import major_project.model.HolidaysAPIManager;
 import major_project.model.SQLManager;
 import major_project.model.TwilioAPIManager;
@@ -13,16 +12,12 @@ import major_project.model.calendar.output.OutputCalendar;
 import major_project.model.calendar.output.OutputCalendarOffline;
 import major_project.model.calendar.output.OutputCalendarOnline;
 
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import java.net.URISyntaxException;
 import java.util.List;
 
 public class App extends Application {
     private InputCalendar inputModel;
     private OutputCalendar outputModel;
     private ViewManager viewManager;
-    private MediaPlayer mediaPlayer;
 
     private final int viewWidth = 1080;
     private final int viewHeight = 720;
@@ -40,20 +35,6 @@ public class App extends Application {
 
         String arg = parameters.get(0) + " " + parameters.get(1);
         System.out.println("arg:" + arg);
-
-        // set up music player
-        try {
-            Media media = new Media(getClass().getResource("/raindrops.wav").toURI().toString());
-            mediaPlayer = new MediaPlayer(media);
-            mediaPlayer.setOnEndOfMedia(() -> mediaPlayer.seek(Duration.ZERO));
-            mediaPlayer.setVolume(0.25);
-            mediaPlayer.play();
-
-        } catch (URISyntaxException | NullPointerException e) {
-            System.out.println("Something wrong happened trying to load the theme song.");
-            System.exit(0);
-
-        }
 
         // sets up input and output models
         switch (arg) {
@@ -79,7 +60,7 @@ public class App extends Application {
 
         }
 
-        viewManager = new ViewManager(stage, inputModel, outputModel, mediaPlayer, viewWidth, viewHeight);
+        viewManager = new ViewManager(stage, inputModel, outputModel, viewWidth, viewHeight);
         stage.setTitle("Holidays Lookup");
         stage.show();
 

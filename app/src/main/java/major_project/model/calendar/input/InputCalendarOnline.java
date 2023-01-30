@@ -2,6 +2,7 @@ package major_project.model.calendar.input;
 
 import major_project.model.Holiday;
 import major_project.model.HolidaysAPIManager;
+import major_project.model.MusicPlayer;
 import major_project.model.SQLManager;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class InputCalendarOnline implements InputCalendar {
+    private final MusicPlayer musicPlayer;
     private final HolidaysAPIManager holidaysAPIManager;
     private final SQLManager sqlManager;
     private String countryAbv;
@@ -21,6 +23,7 @@ public class InputCalendarOnline implements InputCalendar {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
     public InputCalendarOnline(HolidaysAPIManager holidaysAPIManager, SQLManager sqlManager) {
+        musicPlayer = new MusicPlayer();
         this.holidaysAPIManager = holidaysAPIManager;
         this.sqlManager = sqlManager;
 
@@ -158,6 +161,12 @@ public class InputCalendarOnline implements InputCalendar {
         }
 
         return false;
+
+    }
+
+    @Override
+    public MusicPlayer getMusicPlayer() {
+        return musicPlayer;
 
     }
 

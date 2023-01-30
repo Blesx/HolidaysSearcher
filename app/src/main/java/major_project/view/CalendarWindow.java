@@ -11,6 +11,7 @@ import javafx.scene.text.Font;
 import major_project.ViewManager;
 import major_project.model.calendar.input.InputCalendar;
 import major_project.model.calendar.output.OutputCalendar;
+import major_project.view.menu.MusicPlayerDialog;
 import major_project.view.menu.WordMatcherDialog;
 
 import java.time.LocalDate;
@@ -22,13 +23,13 @@ public class CalendarWindow implements Window {
     private final ViewManager manager;
     private final InputCalendar inputModel;
     private final OutputCalendar outputModel;
-    private final MediaPlayer mediaPlayer;
     private Scene scene;
 
     // menu elements
     private MenuBar menuBar;
     private Menu optionsMenu;
     private MenuItem wordMatcherMenuItem;
+    private MenuItem musicPlayerMenuItem;
 
     // left elements
     private Label calendarLabel;
@@ -50,7 +51,6 @@ public class CalendarWindow implements Window {
     private Button chooseButton;
     private Button clearCacheButton;
     private Button reportButton;
-    private Button musicButton;
     private VBox rightVBox;
 
     // layout elements
@@ -61,11 +61,10 @@ public class CalendarWindow implements Window {
     private final Insets hBoxPadding = new Insets(30, 30, 30, 30);
     private final int vBoxSpacing = 10;
 
-    public CalendarWindow(ViewManager manager, InputCalendar model, OutputCalendar outputModel, MediaPlayer mediaPlayer) {
+    public CalendarWindow(ViewManager manager, InputCalendar model, OutputCalendar outputModel) {
         this.manager = manager;
         this.inputModel = model;
         this.outputModel = outputModel;
-        this.mediaPlayer = mediaPlayer;
         drawScene();
 
     }
@@ -78,8 +77,14 @@ public class CalendarWindow implements Window {
 
         });
 
+        musicPlayerMenuItem = new MenuItem("Music player");
+        musicPlayerMenuItem.setOnAction(event -> {
+            new MusicPlayerDialog(manager);
+
+        });
+
         optionsMenu = new Menu("Options");
-        optionsMenu.getItems().add(wordMatcherMenuItem);
+        optionsMenu.getItems().addAll(wordMatcherMenuItem, musicPlayerMenuItem);
         menuBar = new MenuBar();
         menuBar.getMenus().add(optionsMenu);
 
@@ -190,28 +195,7 @@ public class CalendarWindow implements Window {
 
         });
 
-        musicButton = new Button("Toggle music");
-        musicButton.setOnAction(action -> {
-            boolean playing = mediaPlayer.getStatus().equals(MediaPlayer.Status.PLAYING);
-            if (playing) {
-                mediaPlayer.pause();
-
-            } else {
-                mediaPlayer.play();
-
-            }
-
-        });
-
-        musicButton.setOnMouseClicked(event -> {
-            if (event.isControlDown()) {
-                createInformationAlert("Pauses/plays the current music playing.");
-
-            }
-
-        });
-
-        rightVBox = new VBox(controlsLabel, choiceHBox, chooseButton, clearCacheButton, reportButton, musicButton);
+        rightVBox = new VBox(controlsLabel, choiceHBox, chooseButton, clearCacheButton, reportButton);
         rightVBox.setAlignment(Pos.CENTER);
         rightVBox.setPadding(vBoxPadding);
         rightVBox.setSpacing(vBoxSpacing);

@@ -1,6 +1,5 @@
 package major_project;
 
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import major_project.model.calendar.input.InputCalendar;
 import major_project.model.calendar.output.OutputCalendar;
@@ -11,7 +10,6 @@ public class ViewManager {
     private final Stage stage;
     private final InputCalendar inputModel;
     private final OutputCalendar outputModel;
-    private final MediaPlayer mediaPlayer;
     private final int viewWidth;
     private final int viewHeight;
 
@@ -19,15 +17,14 @@ public class ViewManager {
 
     private final int defaultFontSize = 20;
 
-    public ViewManager(Stage stage, InputCalendar inputModel, OutputCalendar outputModel, MediaPlayer mediaPlayer, int viewWidth, int viewHeight) {
+    public ViewManager(Stage stage, InputCalendar inputModel, OutputCalendar outputModel, int viewWidth, int viewHeight) {
         this.stage = stage;
         this.inputModel = inputModel;
         this.outputModel = outputModel;
-        this.mediaPlayer = mediaPlayer;
         this.viewWidth = viewWidth;
         this.viewHeight = viewHeight;
 
-        currentView = new WorldMapWindow(this, mediaPlayer);
+        currentView = new WorldMapWindow(this);
         setScene(currentView);
 
     }
@@ -65,11 +62,6 @@ public class ViewManager {
 
     public OutputCalendar getOutputModel() {
         return outputModel;
-
-    }
-
-    public MediaPlayer getMediaPlayer() {
-        return mediaPlayer;
 
     }
 

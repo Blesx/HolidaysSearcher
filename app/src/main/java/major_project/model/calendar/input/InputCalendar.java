@@ -1,6 +1,7 @@
 package major_project.model.calendar.input;
 
 import major_project.model.Holiday;
+import major_project.model.MusicPlayer;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -85,5 +86,10 @@ public interface InputCalendar {
      * Checks if any holidays match with the word to match
      */
     boolean checkHolidaysMatchWord(List<Holiday> holidays);
+
+    /**
+     * Gets the music player
+     */
+    MusicPlayer getMusicPlayer();
 
 }

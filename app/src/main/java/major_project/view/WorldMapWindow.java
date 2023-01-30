@@ -7,9 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import major_project.ViewManager;
 import org.controlsfx.control.WorldMapView;
@@ -17,19 +15,15 @@ import java.util.Locale;
 
 public class WorldMapWindow implements Window {
     private final ViewManager manager;
-    private final MediaPlayer mediaPlayer;
     private Scene scene;
 
     private Label helpLabel;
     private WorldMapView worldMapView;
-    private Button musicButton;
     private Button chooseButton;
-    private HBox hBox;
     private VBox vBox;
 
-    public WorldMapWindow(ViewManager manager, MediaPlayer mediaPlayer) {
+    public WorldMapWindow(ViewManager manager) {
         this.manager = manager;
-        this.mediaPlayer = mediaPlayer;
         drawScene();
 
     }
@@ -64,30 +58,8 @@ public class WorldMapWindow implements Window {
 
         });
 
-        musicButton = new Button("Toggle music");
-        musicButton.setOnAction(action -> {
-            boolean playing = mediaPlayer.getStatus().equals(MediaPlayer.Status.PLAYING);
-            if (playing) {
-                mediaPlayer.pause();
-
-            } else {
-                mediaPlayer.play();
-
-            }
-
-        });
-
-        musicButton.setOnMouseClicked(event -> {
-            if (event.isControlDown()) {
-                createInformationAlert("Pauses/plays the current music playing.");
-
-            }
-
-        });
-
         chooseButton = new Button("Choose!");
         chooseButton.setOnAction(action -> {
-
             if (!worldMapView.getSelectedCountries().isEmpty()) {
                 String country = getCountryFromAbv(worldMapView.getSelectedCountries());
                 drawCountryConfirm(country, worldMapView.getSelectedCountries().get(0));
@@ -107,11 +79,7 @@ public class WorldMapWindow implements Window {
 
         });
 
-        hBox = new HBox(musicButton, chooseButton);
-        hBox.setSpacing(10);
-        hBox.setAlignment(Pos.CENTER);
-
-        vBox = new VBox(helpLabel, worldMapView, hBox);
+        vBox = new VBox(helpLabel, worldMapView, chooseButton);
         vBox.setAlignment(Pos.CENTER);
 
         scene = new Scene(vBox, manager.getViewWidth(), manager.getViewHeight());
@@ -131,7 +99,7 @@ public class WorldMapWindow implements Window {
 
         alert.showAndWait().ifPresent(result -> {
             if (result == ButtonType.OK) {
-                manager.setScene(new CalendarWindow(manager, manager.getInputModelSetCountry(countryAbv.name()), manager.getOutputModel(), manager.getMediaPlayer()));
+                manager.setScene(new CalendarWindow(manager, manager.getInputModelSetCountry(countryAbv.name()), manager.getOutputModel()));
 
             }
 
