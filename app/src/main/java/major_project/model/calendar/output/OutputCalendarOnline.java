@@ -3,17 +3,9 @@ package major_project.model.calendar.output;
 import major_project.model.Holiday;
 import major_project.model.TwilioAPIManager;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 
 public class OutputCalendarOnline implements OutputCalendar {

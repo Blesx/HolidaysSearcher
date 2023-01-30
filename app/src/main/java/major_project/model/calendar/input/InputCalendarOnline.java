@@ -1,9 +1,6 @@
 package major_project.model.calendar.input;
 
-import major_project.model.Holiday;
-import major_project.model.HolidaysAPIManager;
-import major_project.model.MusicPlayer;
-import major_project.model.SQLManager;
+import major_project.model.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -11,10 +8,10 @@ import java.util.List;
 
 public class InputCalendarOnline implements InputCalendar {
     private final MusicPlayer musicPlayer;
+    private final WordMatcher wordMatcher;
     private final HolidaysAPIManager holidaysAPIManager;
     private final SQLManager sqlManager;
     private String countryAbv;
-    private String wordToMatch = "No word set";
 
     // dates
     private final LocalDate minDate = LocalDate.of(1970, 1, 1);
@@ -23,6 +20,7 @@ public class InputCalendarOnline implements InputCalendar {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
     public InputCalendarOnline(HolidaysAPIManager holidaysAPIManager, SQLManager sqlManager) {
+        wordMatcher = new WordMatcher();
         musicPlayer = new MusicPlayer();
         this.holidaysAPIManager = holidaysAPIManager;
         this.sqlManager = sqlManager;
@@ -135,38 +133,14 @@ public class InputCalendarOnline implements InputCalendar {
     }
 
     @Override
-    public void setWordToMatch(String word) {
-        wordToMatch = word;
-
-    }
-
-    @Override
-    public String getWordToMatch() {
-        return wordToMatch;
-
-    }
-
-    @Override
-    public boolean checkHolidaysMatchWord(List<Holiday> holidays) {
-        String lowerCaseWordToMatch = wordToMatch.toLowerCase();
-
-        for (Holiday holiday : holidays) {
-            String holidayName = holiday.getName().toLowerCase();
-
-            if (holidayName.contains(lowerCaseWordToMatch)) {
-                return true;
-
-            }
-
-        }
-
-        return false;
-
-    }
-
-    @Override
     public MusicPlayer getMusicPlayer() {
         return musicPlayer;
+
+    }
+
+    @Override
+    public WordMatcher getWordMatcher() {
+        return wordMatcher;
 
     }
 

@@ -2,6 +2,7 @@ package major_project.model.calendar.input;
 
 import major_project.model.Holiday;
 import major_project.model.MusicPlayer;
+import major_project.model.WordMatcher;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -73,23 +74,13 @@ public interface InputCalendar {
     void deleteRecord(LocalDate date);
 
     /**
-     * Sets a word to match
-     */
-    void setWordToMatch(String word);
-
-    /**
-     * Gets the word to match
-     */
-    String getWordToMatch();
-
-    /**
-     * Checks if any holidays match with the word to match
-     */
-    boolean checkHolidaysMatchWord(List<Holiday> holidays);
-
-    /**
      * Gets the music player
      */
     MusicPlayer getMusicPlayer();
+
+    /**
+     * Gets the word matcher
+     */
+    WordMatcher getWordMatcher();
 
 }

@@ -6,12 +6,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import major_project.ViewManager;
 import major_project.model.WordMatcher;
-import major_project.view.CalendarWindow;
 
 public class WordMatcherDialog extends Dialog {
     private final ViewManager manager;
-    private final CalendarWindow calendarWindow;
-    private final WordMatcher model;
 
     private Label helpLabel;
     private TextField stringChosenField;
@@ -23,10 +20,8 @@ public class WordMatcherDialog extends Dialog {
     private final double dialogFontSize = 14;
     private final int vBoxSpacing = 10;
 
-    public WordMatcherDialog(ViewManager manager, CalendarWindow calendarWindow) {
+    public WordMatcherDialog(ViewManager manager) {
         this.manager = manager;
-        this.calendarWindow = calendarWindow;
-        model = new WordMatcher();
         drawScene();
 
     }
@@ -47,16 +42,16 @@ public class WordMatcherDialog extends Dialog {
 
         chooseButton = new Button("Choose word!");
         chooseButton.setOnAction(action -> {
+            WordMatcher wordMatcher = manager.getInputModel().getWordMatcher();
             String text = stringChosenField.getText();
 
-            if (model.checkString(text)) {
-                model.setWord(manager.getInputModel(), text);
-                calendarWindow.setWordToMatchLabel();
-                feedback.setText("Word to match set!");
+            if (wordMatcher.isValidWord(text)) {
+                wordMatcher.setWord(text);
+                feedback.setText("'" + text + "' is now set!");
 
 
             } else {
-                feedback.setText("String is invalid. Please make sure it is not empty, and is not just spaces.");
+                feedback.setText("Word is invalid. Please ensure word is not blank.");
 
             }
             feedback.setVisible(true);

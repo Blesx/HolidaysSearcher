@@ -37,10 +37,6 @@ public class CalendarWindow implements Window {
     private List<MonthPane> monthPanes;
     private MonthPane currentMonthPane;
     private VBox calendarVBox;
-
-    private Label wordToMatchLabel;
-    private VBox wordToMatchVBox;
-
     private VBox leftVBox;
 
     // right elements
@@ -73,7 +69,7 @@ public class CalendarWindow implements Window {
         // menu elements
         wordMatcherMenuItem = new MenuItem("Word matcher");
         wordMatcherMenuItem.setOnAction(event -> {
-            new WordMatcherDialog(manager, this);
+            new WordMatcherDialog(manager);
 
         });
 
@@ -103,14 +99,7 @@ public class CalendarWindow implements Window {
         calendarVBox.setPadding(vBoxPadding);
         calendarVBox.setSpacing(vBoxSpacing);
 
-        wordToMatchLabel = new Label("Word to match: " + inputModel.getWordToMatch());
-        wordToMatchLabel.setFont(new Font(manager.getDefaultFontSize()));
-
-        wordToMatchVBox = new VBox(wordToMatchLabel);
-        wordToMatchVBox.setSpacing(vBoxSpacing);
-        wordToMatchVBox.setAlignment(Pos.CENTER);
-
-        leftVBox = new VBox(calendarVBox, wordToMatchVBox);
+        leftVBox = new VBox(calendarVBox);
         leftVBox.setSpacing(vBoxSpacing);
         leftVBox.setAlignment(Pos.CENTER);
 
@@ -283,11 +272,6 @@ public class CalendarWindow implements Window {
         alert.getDialogPane().setMaxWidth(500);
         alert.setHeaderText(message);
         alert.showAndWait();
-
-    }
-
-    public void setWordToMatchLabel() {
-        wordToMatchLabel.setText("Word to match: " + inputModel.getWordToMatch());
 
     }
 

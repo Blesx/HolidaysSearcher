@@ -9,20 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.4: moved wordMatcher to menu as an optional feature">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/MusicPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/MusicPlayerDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/MusicPlayerTest.java" afterDir="false" />
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.5: moved musicPlayer function to menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dates.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/dates.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/Holiday.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/Holiday.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/WordMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/WordMatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOnline.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/WorldMapWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/WorldMapWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/WordMatcherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/WordMatcherDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Unfinished/InvoicerND" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28615862" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -126,7 +127,7 @@
       <recent name="major_project.model.calendar.input" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.offline offline">
+  <component name="RunManager" selected="Gradle.online online">
     <configuration name="AppTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -450,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674958632683</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="v2.1.5: moved musicPlayer function to menu">
+      <created>1675053604535</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675053604535</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -518,6 +526,7 @@
     <MESSAGE value="v2.1.2: set opening window as country selection page" />
     <MESSAGE value="v2.1.3: organized tests into multiple classes" />
     <MESSAGE value="v2.1.4: moved wordMatcher to menu as an optional feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.4: moved wordMatcher to menu as an optional feature" />
+    <MESSAGE value="v2.1.5: moved musicPlayer function to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.5: moved musicPlayer function to menu" />
   </component>
 </project>

@@ -1,10 +1,29 @@
 package major_project.model;
 
-import major_project.model.calendar.input.InputCalendar;
+import java.util.List;
 
 public class WordMatcher {
-    public boolean checkString(String word) {
-        if (word.isEmpty() || word.isBlank()) {
+    private String word = null;
+
+    public boolean isMatchWithHolidays(List<Holiday> holidays) {
+        if (!isValidWord(word)) {
+            return false;
+
+        }
+
+        for (Holiday holiday : holidays) {
+            if (holiday.getName().toLowerCase().contains(word)) {
+                return true;
+
+            }
+        }
+
+        return false;
+
+    }
+
+    public boolean isValidWord(String word) {
+        if (word == null || word.isEmpty() || word.isBlank()) {
             return false;
 
         }
@@ -13,8 +32,13 @@ public class WordMatcher {
 
     }
 
-    public void setWord(InputCalendar calendar, String word) {
-        calendar.setWordToMatch(word);
+    public String getWord() {
+        return word;
+
+    }
+
+    public void setWord(String word) {
+        this.word = word.toLowerCase();
 
     }
 

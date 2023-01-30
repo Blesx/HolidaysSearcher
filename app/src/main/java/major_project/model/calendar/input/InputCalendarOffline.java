@@ -2,6 +2,7 @@ package major_project.model.calendar.input;
 
 import major_project.model.Holiday;
 import major_project.model.MusicPlayer;
+import major_project.model.WordMatcher;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,9 +11,9 @@ import java.util.List;
 
 public class InputCalendarOffline implements InputCalendar {
     private final MusicPlayer musicPlayer;
+    private final WordMatcher wordMatcher;
 
     private String countryAbv;
-    private String wordToMatch = "No word to match set";
 
     private final LocalDate minDate = LocalDate.of(1970, 1, 1);
     private final LocalDate maxDate = LocalDate.of(2037, 12, 31);
@@ -28,6 +29,7 @@ public class InputCalendarOffline implements InputCalendar {
 
     public InputCalendarOffline() {
         musicPlayer = new MusicPlayer();
+        wordMatcher = new WordMatcher();
 
         datesWithHolidays = new ArrayList<>();
         noHolidays = new ArrayList<>();
@@ -209,36 +211,6 @@ public class InputCalendarOffline implements InputCalendar {
 
     }
 
-    @Override
-    public void setWordToMatch(String word) {
-        wordToMatch = word;
-
-    }
-
-    @Override
-    public String getWordToMatch() {
-        return wordToMatch;
-
-    }
-
-    @Override
-    public boolean checkHolidaysMatchWord(List<Holiday> holidays) {
-        String lowerCaseWordToMatch = wordToMatch.toLowerCase();
-
-        for (Holiday holiday : holidays) {
-            String holidayName = holiday.getName().toLowerCase();
-
-            if (holidayName.contains(lowerCaseWordToMatch)) {
-                return true;
-
-            }
-
-        }
-
-        return false;
-
-    }
-
     public boolean dateHasNoHoliday(LocalDate date) {
         for (LocalDate checkedDate : noHolidays) {
             if (checkedDate.equals(date)) {
@@ -255,6 +227,12 @@ public class InputCalendarOffline implements InputCalendar {
     @Override
     public MusicPlayer getMusicPlayer() {
         return musicPlayer;
+
+    }
+
+    @Override
+    public WordMatcher getWordMatcher() {
+        return wordMatcher;
 
     }
 

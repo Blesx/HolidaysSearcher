@@ -143,7 +143,7 @@ public class DayCell extends VBox {
     }
 
     private void checkHolidaysMatchWord(List<Holiday> holidays) {
-        if (inputModel.checkHolidaysMatchWord(holidays)) {
+        if (inputModel.getWordMatcher().isMatchWithHolidays(holidays)) {
             createMatchFoundAlert();
 
         }
@@ -154,7 +154,7 @@ public class DayCell extends VBox {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.getDialogPane().setMaxWidth(500);
         alert.setTitle("Match found!");
-        alert.setHeaderText("This holiday contains the chosen word!");
+        alert.setHeaderText("This holiday contains the word '" + inputModel.getWordMatcher().getWord() + "'!");
         alert.showAndWait();
 
     }

@@ -87,46 +87,4 @@ public class DummyInputTest extends BaseTest {
 
     }
 
-    @Test
-    void dummyInput_checkHolidaysMatchWord_NoMatches_ReturnedFalse() {
-        String toMatch = "apy";
-        wordMatcher.setWord(inputOffline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(happyDay);
-        holidays.add(jubilantDay);
-
-        assertFalse(inputOffline.checkHolidaysMatchWord(holidays));
-
-    }
-
-    @Test
-    void dummyInput_checkHolidaysMatchWord_MatchFound_ReturnedTrue() {
-        String toMatch = "# 9";
-        wordMatcher.setWord(inputOffline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(crazyDay);
-
-        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
-
-        String toMatch2 = "&&#$";
-        wordMatcher.setWord(inputOffline, toMatch2);
-        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
-
-    }
-
-    @Test
-    void dummyInput_checkHolidaysMatchWord2_MatchFound_ReturnedTrue() {
-        String toMatch = "jubilant";
-        wordMatcher.setWord(inputOffline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(happyDay);
-        holidays.add(jubilantDay);
-
-        assertTrue(inputOffline.checkHolidaysMatchWord(holidays));
-
-    }
-
 }

@@ -114,46 +114,4 @@ public class OnlineInputTest extends BaseTest {
 
     }
 
-    @Test
-    void onlineInput_checkHolidaysMatchWord_NoMatches_ReturnedFalse() {
-        String toMatch = "apy";
-        wordMatcher.setWord(inputOnline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(happyDay);
-        holidays.add(jubilantDay);
-
-        assertFalse(inputOnline.checkHolidaysMatchWord(holidays));
-
-    }
-
-    @Test
-    void onlineInput_checkHolidaysMatchWord_MatchFound_ReturnedTrue() {
-        String toMatch = "# 9";
-        wordMatcher.setWord(inputOnline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(crazyDay);
-
-        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
-
-        String toMatch2 = "&&#$";
-        wordMatcher.setWord(inputOnline, toMatch2);
-        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
-
-    }
-
-    @Test
-    void onlineInput_checkHolidaysMatchWord2_MatchFound_ReturnedTrue() {
-        String toMatch = "jubilant";
-        wordMatcher.setWord(inputOnline, toMatch);
-
-        List<Holiday> holidays = new ArrayList<>();
-        holidays.add(happyDay);
-        holidays.add(jubilantDay);
-
-        assertTrue(inputOnline.checkHolidaysMatchWord(holidays));
-
-    }
-
 }
