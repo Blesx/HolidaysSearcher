@@ -24,12 +24,12 @@ class BaseTest {
     static void setupHolidaysAndDates() {
         final JFXPanel fxPanel = new JFXPanel();
 
-        happyDay = new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "1/20/2023", "2023", "1", "20", "Thursday");
-        jubilantDay = new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "1/20/2023", "2023", "1", "20", "Thursday");
-        sadDay = new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "1/24/2023", "2023", "1", "24", "Monday");
-        chinaDay = new Holiday("China Day", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "4/1/2022", "2022", "4", "1", "Sunday");
-        happyChinaDay = new Holiday("Happy China Day", "", "", "The same day as Russia.", "CN", "", "National", "5/20/2022", "2022", "5", "20", "Thursday");
-        crazyDay = new Holiday("&&#$^^# 999", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "4/1/2022", "2022", "4", "1", "Sunday");
+        happyDay = new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "01/20/2023", "2023", "1", "20", "Thursday");
+        jubilantDay = new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "01/20/2023", "2023", "1", "20", "Thursday");
+        sadDay = new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "01/24/2023", "2023", "1", "24", "Monday");
+        chinaDay = new Holiday("China Day", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "04/01/2022", "2022", "4", "1", "Sunday");
+        happyChinaDay = new Holiday("Happy China Day", "", "", "The same day as Russia.", "CN", "", "National", "05/20/2022", "2022", "5", "20", "Thursday");
+        crazyDay = new Holiday("&&#$^^# 999", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "04/01/2022", "2022", "4", "1", "Sunday");
 
         happyDate = LocalDate.of(2023, 1, 20);
         jubilantDate = LocalDate.of(2023, 1, 20);

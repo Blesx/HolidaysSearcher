@@ -1,4 +1,4 @@
-package major_project.model;
+package major_project.model.apis;
 
 import java.io.IOException;
 import java.net.URI;

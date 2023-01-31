@@ -8,7 +8,7 @@ import major_project.ViewManager;
 import major_project.model.WordMatcher;
 
 public class WordMatcherDialog extends Dialog {
-    private final ViewManager manager;
+    private final ViewManager viewManager;
 
     private Label helpLabel;
     private TextField stringChosenField;
@@ -20,8 +20,8 @@ public class WordMatcherDialog extends Dialog {
     private final double dialogFontSize = 14;
     private final int vBoxSpacing = 10;
 
-    public WordMatcherDialog(ViewManager manager) {
-        this.manager = manager;
+    public WordMatcherDialog(ViewManager viewManager) {
+        this.viewManager = viewManager;
         drawScene();
 
     }
@@ -42,7 +42,7 @@ public class WordMatcherDialog extends Dialog {
 
         chooseButton = new Button("Choose word!");
         chooseButton.setOnAction(action -> {
-            WordMatcher wordMatcher = manager.getInputModel().getWordMatcher();
+            WordMatcher wordMatcher = viewManager.getCalendarModel().getWordMatcher();
             String text = stringChosenField.getText();
 
             if (wordMatcher.isValidWord(text)) {

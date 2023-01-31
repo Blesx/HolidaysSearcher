@@ -1,9 +1,9 @@
 package major_project;
 
 import major_project.model.Holiday;
-import major_project.model.TwilioAPIManager;
-import major_project.model.calendar.input.InputCalendarOnline;
-import major_project.model.calendar.output.OutputCalendarOnline;
+import major_project.model.apis.TwilioAPIManager;
+import major_project.model.calendar.CalendarModelOnline;
+import major_project.model.sms.SMSModelOnline;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,15 +15,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class OnlineOutputTest extends BaseTest {
-    InputCalendarOnline inputOnlineMock;
-    OutputCalendarOnline outputOnline;
+    CalendarModelOnline inputOnlineMock;
+    SMSModelOnline outputOnline;
     TwilioAPIManager twilioAPIManager;
 
     @BeforeEach
     void setupModels() {
-        inputOnlineMock = mock(InputCalendarOnline.class);
+        inputOnlineMock = mock(CalendarModelOnline.class);
         twilioAPIManager = mock(TwilioAPIManager.class);
-        outputOnline = new OutputCalendarOnline(twilioAPIManager);
+        outputOnline = new SMSModelOnline(twilioAPIManager);
 
     }
 

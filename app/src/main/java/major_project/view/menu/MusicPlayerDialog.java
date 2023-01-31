@@ -6,13 +6,12 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import major_project.ViewManager;
 import major_project.model.MusicPlayer;
 
 public class MusicPlayerDialog extends Dialog {
-    private final ViewManager manager;
+    private final ViewManager viewManager;
 
     private Label helpLabel;
     private Button musicButton;
@@ -21,8 +20,8 @@ public class MusicPlayerDialog extends Dialog {
     private final double dialogFontSize = 14;
     private final int vBoxSpacing = 10;
 
-    public MusicPlayerDialog(ViewManager manager) {
-        this.manager = manager;
+    public MusicPlayerDialog(ViewManager viewManager) {
+        this.viewManager = viewManager;
         drawScene();
 
     }
@@ -33,7 +32,7 @@ public class MusicPlayerDialog extends Dialog {
 
         musicButton = new Button("Toggle music");
         musicButton.setOnAction(action -> {
-            MusicPlayer musicPlayer = manager.getInputModel().getMusicPlayer();
+            MusicPlayer musicPlayer = viewManager.getCalendarModel().getMusicPlayer();
             if (musicPlayer.isPlayingMusic()) {
                 musicPlayer.pauseMusic();
 

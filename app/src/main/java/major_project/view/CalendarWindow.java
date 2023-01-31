@@ -6,11 +6,10 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import major_project.ViewManager;
-import major_project.model.calendar.input.InputCalendar;
-import major_project.model.calendar.output.OutputCalendar;
+import major_project.model.calendar.CalendarModel;
+import major_project.model.sms.SMSModel;
 import major_project.view.menu.MusicPlayerDialog;
 import major_project.view.menu.WordMatcherDialog;
 
@@ -20,9 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CalendarWindow implements Window {
-    private final ViewManager manager;
-    private final InputCalendar inputModel;
-    private final OutputCalendar outputModel;
+    private final ViewManager viewManager;
+    private final CalendarModel calendarModel;
+    private final SMSModel smsModel;
     private Scene scene;
 
     // menu elements
@@ -57,10 +56,10 @@ public class CalendarWindow implements Window {
     private final Insets hBoxPadding = new Insets(30, 30, 30, 30);
     private final int vBoxSpacing = 10;
 
-    public CalendarWindow(ViewManager manager, InputCalendar model, OutputCalendar outputModel) {
-        this.manager = manager;
-        this.inputModel = model;
-        this.outputModel = outputModel;
+    public CalendarWindow(ViewManager viewManager, CalendarModel model, SMSModel smsModel) {
+        this.viewManager = viewManager;
+        this.calendarModel = model;
+        this.smsModel = smsModel;
         drawScene();
 
     }
@@ -69,13 +68,13 @@ public class CalendarWindow implements Window {
         // menu elements
         wordMatcherMenuItem = new MenuItem("Word matcher");
         wordMatcherMenuItem.setOnAction(event -> {
-            new WordMatcherDialog(manager);
+            new WordMatcherDialog(viewManager);
 
         });
 
         musicPlayerMenuItem = new MenuItem("Music player");
         musicPlayerMenuItem.setOnAction(event -> {
-            new MusicPlayerDialog(manager);
+            new MusicPlayerDialog(viewManager);
 
         });
 
@@ -85,11 +84,11 @@ public class CalendarWindow implements Window {
         menuBar.getMenus().add(optionsMenu);
 
         // left elements
-        countryLabel = new Label(inputModel.getCountryAbv());
-        countryLabel.setFont(new Font(manager.getDefaultFontSize()));
+        countryLabel = new Label(calendarModel.getCountryAbv());
+        countryLabel.setFont(new Font(viewManager.getDefaultFontSize()));
 
         calendarLabel = new Label("Calendar");
-        calendarLabel.setFont(new Font(manager.getDefaultFontSize()));
+        calendarLabel.setFont(new Font(viewManager.getDefaultFontSize()));
 
         buildTimeSystems();
         buildMonth();
@@ -105,7 +104,7 @@ public class CalendarWindow implements Window {
 
         // right elements
         controlsLabel = new Label("Controls");
-        controlsLabel.setFont(new Font(manager.getDefaultFontSize()));
+        controlsLabel.setFont(new Font(viewManager.getDefaultFontSize()));
 
         choiceHBox = new HBox(monthListView, yearListView);
         choiceHBox.setPadding(hBoxPadding);
@@ -116,8 +115,8 @@ public class CalendarWindow implements Window {
                 int year = yearListView.getSelectionModel().getSelectedItem();
                 int month = monthListView.getSelectionModel().getSelectedItem().getValue();
 
-                if (!inputModel.getCurrentDate().isEqual(LocalDate.of(year, month, inputModel.getCurrentDate().getDayOfMonth()))) {
-                    inputModel.setCurrentDate(LocalDate.of(year, month, 1));
+                if (!calendarModel.getCurrentDate().isEqual(LocalDate.of(year, month, calendarModel.getCurrentDate().getDayOfMonth()))) {
+                    calendarModel.setCurrentDate(LocalDate.of(year, month, 1));
                     buildMonth();
 
                 }
@@ -143,7 +142,7 @@ public class CalendarWindow implements Window {
             confirmClear.setHeaderText("Would you like to clear the cache?");
             confirmClear.showAndWait().ifPresent(result -> {
                 if (result == ButtonType.OK) {
-                    inputModel.resetHolidays();
+                    calendarModel.resetHolidays();
 
                 }
 
@@ -165,9 +164,9 @@ public class CalendarWindow implements Window {
             alert.setHeaderText("Would you like to send a short report to your phone number (allocated by env. variable TWILIO_API_TO)?");
             alert.showAndWait().ifPresent(result -> {
                 if (result == ButtonType.OK) {
-                    outputModel.sendShortReport(currentMonthPane.getHolidays(), inputModel.getCurrentDate());
+                    smsModel.sendShortReport(currentMonthPane.getHolidays(), calendarModel.getCurrentDate());
                     Alert information = new Alert(Alert.AlertType.INFORMATION);
-                    information.setHeaderText(outputModel.sendFeedback());
+                    information.setHeaderText(smsModel.sendFeedback());
                     information.showAndWait();
 
                 }
@@ -195,7 +194,7 @@ public class CalendarWindow implements Window {
 
         windowVBox = new VBox(menuBar, splitPane);
 
-        scene = new Scene(windowVBox, manager.getViewWidth(), manager.getViewHeight());
+        scene = new Scene(windowVBox, viewManager.getViewWidth(), viewManager.getViewHeight());
 
     }
 
@@ -210,9 +209,9 @@ public class CalendarWindow implements Window {
         });
 
         List<Integer> years = new ArrayList<>();
-        LocalDate datesToExtract = inputModel.getMinDate();
+        LocalDate datesToExtract = calendarModel.getMinDate();
 
-        while (datesToExtract.isBefore(inputModel.getMaxDate())) {
+        while (datesToExtract.isBefore(calendarModel.getMaxDate())) {
             years.add((datesToExtract.getYear()));
             datesToExtract = datesToExtract.plusYears(1);
 
@@ -241,7 +240,7 @@ public class CalendarWindow implements Window {
     }
 
     private void buildMonth() {
-        LocalDate chosenDate = inputModel.getCurrentDate();
+        LocalDate chosenDate = calendarModel.getCurrentDate();
         calendarLabel.setText(chosenDate.getMonth() + " " + chosenDate.getYear());
 
         if (monthPanes == null) {
@@ -261,7 +260,7 @@ public class CalendarWindow implements Window {
 
         }
 
-        currentMonthPane = new MonthPane(inputModel);
+        currentMonthPane = new MonthPane(calendarModel);
         monthPanes.add(currentMonthPane);
         buildCalendar();
 

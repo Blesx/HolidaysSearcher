@@ -4,14 +4,14 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 import major_project.model.Holiday;
-import major_project.model.calendar.input.InputCalendar;
+import major_project.model.calendar.CalendarModel;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MonthPane {
-    private final InputCalendar inputModel;
+    private final CalendarModel calendarModel;
     private final LocalDate assignedDate;
 
     private GridPane monthPane;
@@ -20,9 +20,9 @@ public class MonthPane {
     private final int rowCount = 5;
     private final int colCount = 7;
 
-    public MonthPane(InputCalendar inputModel) {
-        this.inputModel = inputModel;
-        this.assignedDate = inputModel.getCurrentDate();
+    public MonthPane(CalendarModel calendarModel) {
+        this.calendarModel = calendarModel;
+        this.assignedDate = calendarModel.getCurrentDate();
         cells = new ArrayList<>();
         buildPane();
         buildContent();
@@ -60,7 +60,7 @@ public class MonthPane {
 
         while (xCord != rowCount && date.isBefore(monthEndDate)) {
             while (yCord != colCount && date.isBefore(monthEndDate)) {
-                DayCell cell = new DayCell(date, inputModel);
+                DayCell cell = new DayCell(date, calendarModel);
                 cells.add(cell);
                 monthPane.add(cell, yCord, xCord);
                 date = date.plusDays(1);

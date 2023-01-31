@@ -1,8 +1,8 @@
 package major_project;
 
 import major_project.model.Holiday;
-import major_project.model.calendar.input.InputCalendarOffline;
-import major_project.model.calendar.output.OutputCalendarOffline;
+import major_project.model.calendar.CalendarModelDummy;
+import major_project.model.sms.SMSModelDummy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,13 +14,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class DummyOutputTest extends BaseTest {
-    InputCalendarOffline inputOfflineMock;
-    OutputCalendarOffline outputOffline;
+    CalendarModelDummy inputOfflineMock;
+    SMSModelDummy outputOffline;
 
     @BeforeEach
     void setupModels() {
-        inputOfflineMock = mock(InputCalendarOffline.class);
-        outputOffline = new OutputCalendarOffline();
+        inputOfflineMock = mock(CalendarModelDummy.class);
+        outputOffline = new SMSModelDummy();
 
     }
 

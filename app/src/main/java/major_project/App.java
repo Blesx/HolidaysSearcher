@@ -2,21 +2,21 @@ package major_project;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import major_project.model.HolidaysAPIManager;
-import major_project.model.SQLManager;
-import major_project.model.TwilioAPIManager;
-import major_project.model.calendar.input.InputCalendar;
-import major_project.model.calendar.input.InputCalendarOffline;
-import major_project.model.calendar.input.InputCalendarOnline;
-import major_project.model.calendar.output.OutputCalendar;
-import major_project.model.calendar.output.OutputCalendarOffline;
-import major_project.model.calendar.output.OutputCalendarOnline;
+import major_project.model.apis.HolidaysAPIManager;
+import major_project.model.apis.SQLManager;
+import major_project.model.apis.TwilioAPIManager;
+import major_project.model.calendar.CalendarModel;
+import major_project.model.calendar.CalendarModelDummy;
+import major_project.model.calendar.CalendarModelOnline;
+import major_project.model.sms.SMSModel;
+import major_project.model.sms.SMSModelDummy;
+import major_project.model.sms.SMSModelOnline;
 
 import java.util.List;
 
 public class App extends Application {
-    private InputCalendar inputModel;
-    private OutputCalendar outputModel;
+    private CalendarModel calendarModel;
+    private SMSModel smsModel;
     private ViewManager viewManager;
 
     private final int viewWidth = 1080;
@@ -39,20 +39,20 @@ public class App extends Application {
         // sets up input and output models
         switch (arg) {
             case "online online":
-                inputModel = new InputCalendarOnline(new HolidaysAPIManager(), new SQLManager());
-                outputModel = new OutputCalendarOnline(new TwilioAPIManager());
+                calendarModel = new CalendarModelOnline(new HolidaysAPIManager(), new SQLManager());
+                smsModel = new SMSModelOnline(new TwilioAPIManager());
                 break;
             case "offline online":
-                inputModel = new InputCalendarOffline();
-                outputModel = new OutputCalendarOnline(new TwilioAPIManager());
+                calendarModel = new CalendarModelDummy();
+                smsModel = new SMSModelOnline(new TwilioAPIManager());
                 break;
             case "online offline":
-                inputModel = new InputCalendarOnline(new HolidaysAPIManager(), new SQLManager());
-                outputModel = new OutputCalendarOffline();
+                calendarModel = new CalendarModelOnline(new HolidaysAPIManager(), new SQLManager());
+                smsModel = new SMSModelDummy();
                 break;
             case "offline offline":
-                inputModel = new InputCalendarOffline();
-                outputModel = new OutputCalendarOffline();
+                calendarModel = new CalendarModelDummy();
+                smsModel = new SMSModelDummy();
                 break;
             default:
                 System.out.println("Invalid argument. Please use either online/offline to specify mode.");
@@ -60,7 +60,7 @@ public class App extends Application {
 
         }
 
-        viewManager = new ViewManager(stage, inputModel, outputModel, viewWidth, viewHeight);
+        viewManager = new ViewManager(stage, calendarModel, smsModel, viewWidth, viewHeight);
         stage.setTitle("Holidays Lookup");
         stage.show();
 

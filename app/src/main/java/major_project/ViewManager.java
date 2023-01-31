@@ -1,15 +1,15 @@
 package major_project;
 
 import javafx.stage.Stage;
-import major_project.model.calendar.input.InputCalendar;
-import major_project.model.calendar.output.OutputCalendar;
+import major_project.model.calendar.CalendarModel;
+import major_project.model.sms.SMSModel;
 import major_project.view.Window;
 import major_project.view.WorldMapWindow;
 
 public class ViewManager {
     private final Stage stage;
-    private final InputCalendar inputModel;
-    private final OutputCalendar outputModel;
+    private final CalendarModel calendarModel;
+    private final SMSModel smsModel;
     private final int viewWidth;
     private final int viewHeight;
 
@@ -17,10 +17,10 @@ public class ViewManager {
 
     private final int defaultFontSize = 20;
 
-    public ViewManager(Stage stage, InputCalendar inputModel, OutputCalendar outputModel, int viewWidth, int viewHeight) {
+    public ViewManager(Stage stage, CalendarModel calendarModel, SMSModel smsModel, int viewWidth, int viewHeight) {
         this.stage = stage;
-        this.inputModel = inputModel;
-        this.outputModel = outputModel;
+        this.calendarModel = calendarModel;
+        this.smsModel = smsModel;
         this.viewWidth = viewWidth;
         this.viewHeight = viewHeight;
 
@@ -49,19 +49,19 @@ public class ViewManager {
 
     }
 
-    public InputCalendar getInputModelSetCountry(String countryAbv) {
-        inputModel.setCountryAbv(countryAbv);
-        return inputModel;
+    public CalendarModel getInputModelSetCountry(String countryAbv) {
+        calendarModel.setCountryAbv(countryAbv);
+        return calendarModel;
 
     }
 
-    public InputCalendar getInputModel() {
-        return inputModel;
+    public CalendarModel getCalendarModel() {
+        return calendarModel;
 
     }
 
-    public OutputCalendar getOutputModel() {
-        return outputModel;
+    public SMSModel getSmsModel() {
+        return smsModel;
 
     }
 

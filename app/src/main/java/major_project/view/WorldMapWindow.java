@@ -14,7 +14,7 @@ import org.controlsfx.control.WorldMapView;
 import java.util.Locale;
 
 public class WorldMapWindow implements Window {
-    private final ViewManager manager;
+    private final ViewManager viewManager;
     private Scene scene;
 
     private Label helpLabel;
@@ -22,15 +22,15 @@ public class WorldMapWindow implements Window {
     private Button chooseButton;
     private VBox vBox;
 
-    public WorldMapWindow(ViewManager manager) {
-        this.manager = manager;
+    public WorldMapWindow(ViewManager viewManager) {
+        this.viewManager = viewManager;
         drawScene();
 
     }
 
     private void drawScene() {
         helpLabel = new Label("Click on a country to start looking!");
-        helpLabel.setFont(new Font(manager.getDefaultFontSize()));
+        helpLabel.setFont(new Font(viewManager.getDefaultFontSize()));
 
         worldMapView = new WorldMapView();
         worldMapView.setCountrySelectionMode(WorldMapView.SelectionMode.SINGLE);
@@ -82,7 +82,7 @@ public class WorldMapWindow implements Window {
         vBox = new VBox(helpLabel, worldMapView, chooseButton);
         vBox.setAlignment(Pos.CENTER);
 
-        scene = new Scene(vBox, manager.getViewWidth(), manager.getViewHeight());
+        scene = new Scene(vBox, viewManager.getViewWidth(), viewManager.getViewHeight());
 
     }
 
@@ -99,7 +99,7 @@ public class WorldMapWindow implements Window {
 
         alert.showAndWait().ifPresent(result -> {
             if (result == ButtonType.OK) {
-                manager.setScene(new CalendarWindow(manager, manager.getInputModelSetCountry(countryAbv.name()), manager.getOutputModel()));
+                viewManager.setScene(new CalendarWindow(viewManager, viewManager.getInputModelSetCountry(countryAbv.name()), viewManager.getSmsModel()));
 
             }
 

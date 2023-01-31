@@ -1,4 +1,4 @@
-package major_project.model.calendar.output;
+package major_project.model.sms;
 
 import major_project.model.Holiday;
 
@@ -7,25 +7,22 @@ import java.time.YearMonth;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OutputCalendarOffline implements OutputCalendar {
-    private List<Holiday> holidaysInMonth;
-    private YearMonth yearMonth;
-    private String report;
+public abstract class SMSModel {
+    protected List<Holiday> holidaysInMonth;
+    protected YearMonth yearMonth;
+    protected String report;
 
-    @Override
-    public void sendShortReport(List<Holiday> holidaysInMonth, LocalDate currentDate) {
-        this.holidaysInMonth = holidaysInMonth;
-        yearMonth = YearMonth.of(currentDate.getYear(), currentDate.getMonth());
-        report = generateShortReport();
+    /**
+     * Sends a short report to the phone number via Twilio specified by the user's env variable - TWILIO_API_TO
+     */
+    public abstract void sendShortReport(List<Holiday> holidaysInMonth, LocalDate currentDate);
 
-    }
+    /**
+     * Returns the user a message if the report was sent or not
+     */
+    public abstract String sendFeedback();
 
-    @Override
-    public String sendFeedback() {
-        return report;
-    }
-
-    private String generateShortReport() {
+    protected String generateShortReport() {
         List<String> uniqueDays = new ArrayList<>();
         String days = "";
 
@@ -46,7 +43,7 @@ public class OutputCalendarOffline implements OutputCalendar {
 
     }
 
-    private boolean dayIsUnique(List<String> uniqueDays, String day) {
+    protected boolean dayIsUnique(List<String> uniqueDays, String day) {
         for (String holiday : uniqueDays) {
             if (holiday.equals(day)) {
                 return false;

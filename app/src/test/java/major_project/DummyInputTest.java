@@ -2,7 +2,7 @@ package major_project;
 
 import major_project.model.Holiday;
 import major_project.model.WordMatcher;
-import major_project.model.calendar.input.InputCalendarOffline;
+import major_project.model.calendar.CalendarModelDummy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DummyInputTest extends BaseTest {
-    InputCalendarOffline inputOffline;
+    CalendarModelDummy inputOffline;
     WordMatcher wordMatcher;
 
     @BeforeEach
     void setupModels() {
-        inputOffline = new InputCalendarOffline();
+        inputOffline = new CalendarModelDummy();
         wordMatcher = new WordMatcher();
 
     }

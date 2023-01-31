@@ -1,41 +1,19 @@
-package major_project.model.calendar.input;
+package major_project.model.calendar;
 
 import major_project.model.*;
+import major_project.model.apis.HolidaysAPIManager;
+import major_project.model.apis.SQLManager;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class InputCalendarOnline implements InputCalendar {
-    private final MusicPlayer musicPlayer;
-    private final WordMatcher wordMatcher;
+public class CalendarModelOnline extends CalendarModel {
     private final HolidaysAPIManager holidaysAPIManager;
     private final SQLManager sqlManager;
-    private String countryAbv;
 
-    // dates
-    private final LocalDate minDate = LocalDate.of(1970, 1, 1);
-    private final LocalDate maxDate = LocalDate.of(2037, 12, 31);
-    private LocalDate currentDate = LocalDate.now();
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-
-    public InputCalendarOnline(HolidaysAPIManager holidaysAPIManager, SQLManager sqlManager) {
-        wordMatcher = new WordMatcher();
-        musicPlayer = new MusicPlayer();
+    public CalendarModelOnline(HolidaysAPIManager holidaysAPIManager, SQLManager sqlManager) {
         this.holidaysAPIManager = holidaysAPIManager;
         this.sqlManager = sqlManager;
-
-    }
-
-    @Override
-    public String getCountryAbv() {
-        return countryAbv;
-
-    }
-
-    @Override
-    public void setCountryAbv(String countryAbv) {
-        this.countryAbv = countryAbv;
 
     }
 
@@ -74,30 +52,6 @@ public class InputCalendarOnline implements InputCalendar {
     }
 
     @Override
-    public LocalDate getMinDate() {
-        return minDate;
-
-    }
-
-    @Override
-    public LocalDate getMaxDate() {
-        return maxDate;
-
-    }
-
-    @Override
-    public LocalDate getCurrentDate() {
-        return currentDate;
-
-    }
-
-    @Override
-    public void setCurrentDate(LocalDate currentDate) {
-        this.currentDate = currentDate;
-
-    }
-
-    @Override
     public List<Holiday> getHolidaysInMonth() {
         String sYear = String.format("%02d", currentDate.getYear());
         String sMonth = String.format("%02d", currentDate.getMonthValue());
@@ -129,18 +83,6 @@ public class InputCalendarOnline implements InputCalendar {
     public void deleteRecord(LocalDate date) {
         String formattedDate = date.format(formatter);
         sqlManager.deleteEntry(formattedDate, countryAbv);
-
-    }
-
-    @Override
-    public MusicPlayer getMusicPlayer() {
-        return musicPlayer;
-
-    }
-
-    @Override
-    public WordMatcher getWordMatcher() {
-        return wordMatcher;
 
     }
 

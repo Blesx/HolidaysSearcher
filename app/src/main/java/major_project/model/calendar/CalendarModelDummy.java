@@ -1,53 +1,24 @@
-package major_project.model.calendar.input;
+package major_project.model.calendar;
 
 import major_project.model.Holiday;
-import major_project.model.MusicPlayer;
-import major_project.model.WordMatcher;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InputCalendarOffline implements InputCalendar {
-    private final MusicPlayer musicPlayer;
-    private final WordMatcher wordMatcher;
-
-    private String countryAbv;
-
-    private final LocalDate minDate = LocalDate.of(1970, 1, 1);
-    private final LocalDate maxDate = LocalDate.of(2037, 12, 31);
-    private LocalDate currentDate = LocalDate.now();
-
-    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/yyyy");
-
+public class CalendarModelDummy extends CalendarModel {
     private List<Holiday> holidaysRU;
     private List<Holiday> holidaysCN;
 
     private List<Holiday> datesWithHolidays;
     private List<LocalDate> noHolidays;
 
-    public InputCalendarOffline() {
-        musicPlayer = new MusicPlayer();
-        wordMatcher = new WordMatcher();
-
+    public CalendarModelDummy() {
         datesWithHolidays = new ArrayList<>();
         noHolidays = new ArrayList<>();
 
         buildRUList();
         buildCNList();
-
-    }
-
-    @Override
-    public String getCountryAbv() {
-        return countryAbv;
-
-    }
-
-    @Override
-    public void setCountryAbv(String countryAbv) {
-        this.countryAbv = countryAbv;
 
     }
 
@@ -83,6 +54,7 @@ public class InputCalendarOffline implements InputCalendar {
 
     }
 
+    @Override
     public List<Holiday> getHolidaysOnDay(LocalDate date) {
         List<Holiday> hols = new ArrayList<>();
 
@@ -116,38 +88,17 @@ public class InputCalendarOffline implements InputCalendar {
 
     private void buildRUList() {
         holidaysRU = new ArrayList<>();
-        holidaysRU.add(new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "1/20/2023", "2023", "1", "20", "Thursday"));
-        holidaysRU.add(new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "1/24/2023", "2023", "1", "24", "Monday"));
-        holidaysRU.add(new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "1/20/2023", "2023", "1", "20", "Thursday"));
+        holidaysRU.add(new Holiday("Happy Day", "", "", "A day for being really happy and stuff...", "RU", "Moscow", "Regional", "01/20/2023", "2023", "1", "20", "Thursday"));
+        holidaysRU.add(new Holiday("Sad Day", "", "", "Sometimes being sad needs to be recognized, well who knows.", "RU", "", "National", "01/24/2023", "2023", "1", "24", "Monday"));
+        holidaysRU.add(new Holiday("Jubilant Day", "", "", "Wow! This is what happens when happy is on crack!", "RU", "", "Regional", "01/20/2023", "2023", "1", "20", "Thursday"));
 
     }
 
     private void buildCNList() {
         holidaysCN = new ArrayList<>();
-        holidaysCN.add(new Holiday("China Day", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "4/1/2022", "2022", "4", "1", "Sunday"));
-        holidaysCN.add(new Holiday("Happy China Day", "", "", "The same day as Russia.", "CN", "", "National", "5/20/2022", "2022", "5", "20", "Thursday"));
-        holidaysCN.add(new Holiday("Beijing Day", "", "", "When Beijing became the greatest capital in the world.", "CN", "", "Regional", "8/22/1970", "1970", "8", "22", "Monday"));
-
-    }
-
-    public LocalDate getMinDate() {
-        return minDate;
-
-    }
-
-    public LocalDate getMaxDate() {
-        return maxDate;
-
-    }
-
-    public LocalDate getCurrentDate() {
-        return currentDate;
-
-    }
-
-    @Override
-    public void setCurrentDate(LocalDate currentDate) {
-        this.currentDate = currentDate;
+        holidaysCN.add(new Holiday("China Day", "", "", "Why is this a day? Every day is China day.", "CN", "", "National", "04/01/2022", "2022", "4", "1", "Sunday"));
+        holidaysCN.add(new Holiday("Happy China Day", "", "", "The same day as Russia.", "CN", "", "National", "05/20/2022", "2022", "5", "20", "Thursday"));
+        holidaysCN.add(new Holiday("Beijing Day", "", "", "When Beijing became the greatest capital in the world.", "CN", "", "Regional", "08/22/1970", "1970", "8", "22", "Monday"));
 
     }
 
@@ -192,6 +143,7 @@ public class InputCalendarOffline implements InputCalendar {
 
     }
 
+    @Override
     public boolean dateHasHoliday(LocalDate date) {
         for (Holiday holiday : datesWithHolidays) {
             if (holiday.getDate().equals(date.format(formatter))) {
@@ -202,12 +154,6 @@ public class InputCalendarOffline implements InputCalendar {
         }
 
         return false;
-
-    }
-
-    @Override
-    public void deleteRecord(LocalDate date) {
-
 
     }
 
@@ -225,15 +171,6 @@ public class InputCalendarOffline implements InputCalendar {
     }
 
     @Override
-    public MusicPlayer getMusicPlayer() {
-        return musicPlayer;
-
-    }
-
-    @Override
-    public WordMatcher getWordMatcher() {
-        return wordMatcher;
-
-    }
+    public void deleteRecord(LocalDate date) {}
 
 }

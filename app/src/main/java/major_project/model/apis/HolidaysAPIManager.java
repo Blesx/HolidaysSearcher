@@ -1,8 +1,9 @@
-package major_project.model;
+package major_project.model.apis;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
+import major_project.model.Holiday;
 
 import java.io.IOException;
 import java.lang.reflect.Type;

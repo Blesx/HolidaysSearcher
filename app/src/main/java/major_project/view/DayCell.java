@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import major_project.model.Holiday;
-import major_project.model.calendar.input.InputCalendar;
+import major_project.model.calendar.CalendarModel;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -16,16 +16,16 @@ import java.util.Optional;
 
 public class DayCell extends VBox {
     private final LocalDate date;
-    private final InputCalendar inputModel;
+    private final CalendarModel calendarModel;
 
     private List<Holiday> holidays;
 
     private boolean isHoliday = false;
     private boolean unknown = true;
 
-    public DayCell(LocalDate date, InputCalendar inputModel) {
+    public DayCell(LocalDate date, CalendarModel calendarModel) {
         this.date = date;
-        this.inputModel = inputModel;
+        this.calendarModel = calendarModel;
         holidays = new ArrayList<>();
         buildCell();
 
@@ -58,7 +58,7 @@ public class DayCell extends VBox {
         array.add("cache data");
         array.add("fresh api call");
 
-        if (inputModel.dateIsChecked(date)) {
+        if (calendarModel.dateIsChecked(date)) {
             ChoiceDialog<String> choiceDialog = new ChoiceDialog<>(array.get(0), array);
             choiceDialog.setHeaderText("Cache data detected. Choose which data you would like to load.");
             Optional<String> result = choiceDialog.showAndWait();
@@ -69,9 +69,9 @@ public class DayCell extends VBox {
                 getChildren().clear();
                 getChildren().add(new Label(Integer.toString(getDay())));
 
-                if (inputModel.dateHasHoliday(date)) {
+                if (calendarModel.dateHasHoliday(date)) {
                     isHoliday = true;
-                    holidays = inputModel.getHolidaysOnDay(date);
+                    holidays = calendarModel.getHolidaysOnDay(date);
                     for (Holiday holiday : holidays) {
                         getChildren().add(new Label(holiday.getName()));
 
@@ -87,7 +87,7 @@ public class DayCell extends VBox {
                 return;
 
             } else if (result.isPresent() && result.get().equals("fresh api call")) {
-                inputModel.deleteRecord(date);
+                calendarModel.deleteRecord(date);
 
             }
 
@@ -98,10 +98,10 @@ public class DayCell extends VBox {
         getChildren().add(new Label(Integer.toString(getDay())));
 
         // sends request and checks cell for holiday
-        if (inputModel.checkDateForHoliday(date)) {
+        if (calendarModel.checkDateForHoliday(date)) {
             isHoliday = true;
             setColor();
-            holidays = inputModel.getHolidaysOnDay(date);
+            holidays = calendarModel.getHolidaysOnDay(date);
 
             for (Holiday holiday : holidays) {
                 getChildren().add(new Label(holiday.getName()));
@@ -143,7 +143,7 @@ public class DayCell extends VBox {
     }
 
     private void checkHolidaysMatchWord(List<Holiday> holidays) {
-        if (inputModel.getWordMatcher().isMatchWithHolidays(holidays)) {
+        if (calendarModel.getWordMatcher().isMatchWithHolidays(holidays)) {
             createMatchFoundAlert();
 
         }
@@ -154,7 +154,7 @@ public class DayCell extends VBox {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.getDialogPane().setMaxWidth(500);
         alert.setTitle("Match found!");
-        alert.setHeaderText("This holiday contains the word '" + inputModel.getWordMatcher().getWord() + "'!");
+        alert.setHeaderText("This holiday contains the word '" + calendarModel.getWordMatcher().getWord() + "'!");
         alert.showAndWait();
 
     }

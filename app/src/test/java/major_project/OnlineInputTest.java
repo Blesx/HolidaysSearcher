@@ -1,10 +1,10 @@
 package major_project;
 
 import major_project.model.Holiday;
-import major_project.model.HolidaysAPIManager;
-import major_project.model.SQLManager;
+import major_project.model.apis.HolidaysAPIManager;
+import major_project.model.apis.SQLManager;
 import major_project.model.WordMatcher;
-import major_project.model.calendar.input.InputCalendarOnline;
+import major_project.model.calendar.CalendarModelOnline;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.verify;
 
 public class OnlineInputTest extends BaseTest {
-    InputCalendarOnline inputOnline;
+    CalendarModelOnline inputOnline;
     HolidaysAPIManager holidaysAPIManager;
     SQLManager sqlManager;
     WordMatcher wordMatcher;
@@ -30,7 +30,7 @@ public class OnlineInputTest extends BaseTest {
     void setupModels() {
         holidaysAPIManager = mock(HolidaysAPIManager.class);
         sqlManager = mock(SQLManager.class);
-        inputOnline = new InputCalendarOnline(holidaysAPIManager, sqlManager);
+        inputOnline = new CalendarModelOnline(holidaysAPIManager, sqlManager);
         wordMatcher = new WordMatcher();
 
     }
