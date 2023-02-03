@@ -9,24 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.7: changed InputCalendar (now CalendarModel) and OutputCalendar (now SMSModel) to abstract classes">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyCalendarTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummySMSTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineCalendarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+    <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.8: added unit tests for calendarModel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/MusicPlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/MusicPlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineSMSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -475,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675156752761</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="v2.1.8: added unit tests for calendarModel">
+      <created>1675395869429</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1675395869429</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -521,7 +513,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="major: completed basic framework, WorldMapWindow" />
     <MESSAGE value="major: did some CalendarWindow" />
     <MESSAGE value="ready to submit milestone 1: created calendar, added input api, output api, input/output dummies, test suite (offline)" />
     <MESSAGE value="ready to submit milestone 1: submit gradle files" />
@@ -546,6 +537,7 @@
     <MESSAGE value="v2.1.5: moved musicPlayer function to menu" />
     <MESSAGE value="v2.1.6: encapsulated wordMatcher into its own class (like musicPlayer)" />
     <MESSAGE value="v2.1.7: changed (and renamed) InputCalendar and OutputCalendar to abstract classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.7: changed (and renamed) InputCalendar and OutputCalendar to abstract classes" />
+    <MESSAGE value="v2.1.8: added unit tests for calendarModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.8: added unit tests for calendarModel" />
   </component>
 </project>
