@@ -22,7 +22,7 @@ At the moment users require an <a href = "https://www.abstractapi.com/api/holida
       - gradle run --args="online offline"
       - gradle run --args="offline online"
       - gradle run --args="offline offline"
-   2. Navigate to the _HolidaysSearcher\out\artifacts\major_project_jar_ directory and run startAppScript.sh. It loads the application with online capabilities
+   2. Navigate to the _HolidaysSearcher\out\artifacts\major_project_jar directory and run startAppScript.sh. It loads the application with online capabilities
 
 <h3>Current Features - v2.1.0</h3>
 

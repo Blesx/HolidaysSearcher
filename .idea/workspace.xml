@@ -10,34 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9f43060-d824-4e45-b592-347cc9cd7bd5" name="Changes" comment="v2.1.7: changed InputCalendar (now CalendarModel) and OutputCalendar (now SMSModel) to abstract classes">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/sms/SMSModelDummy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/sms/SMSModelOnline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyCalendarTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummySMSTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineCalendarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/ViewManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/HolidaysAPIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/apis/HolidaysAPIManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/SQLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/apis/SQLManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/TwilioAPIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/apis/TwilioAPIManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOffline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/input/InputCalendarOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOffline.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/sms/SMSModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/output/OutputCalendarOnline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/CalendarWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/DayCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/MonthPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/MonthPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/WorldMapWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/WorldMapWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/MusicPlayerDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/MusicPlayerDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/WordMatcherDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/view/menu/WordMatcherDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/major_project/model/calendar/CalendarModelDummy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyInputTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/DummyOutputTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/MusicPlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/MusicPlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineInputTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineOutputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/OnlineSMSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/major_project/WordMatcherTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/major_project_jar/major_project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +114,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Unfinished/InvoicerND" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28615862" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -479,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675060376467</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="v2.1.7: changed InputCalendar (now CalendarModel) and OutputCalendar (now SMSModel) to abstract classes">
+      <created>1675156752761</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675156752761</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -549,6 +545,7 @@
     <MESSAGE value="v2.1.4: moved wordMatcher to menu as an optional feature" />
     <MESSAGE value="v2.1.5: moved musicPlayer function to menu" />
     <MESSAGE value="v2.1.6: encapsulated wordMatcher into its own class (like musicPlayer)" />
-    <option name="LAST_COMMIT_MESSAGE" value="v2.1.6: encapsulated wordMatcher into its own class (like musicPlayer)" />
+    <MESSAGE value="v2.1.7: changed (and renamed) InputCalendar and OutputCalendar to abstract classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2.1.7: changed (and renamed) InputCalendar and OutputCalendar to abstract classes" />
   </component>
 </project>
