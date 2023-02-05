@@ -1,7 +1,9 @@
 <h1>HolidaysSearcher</h1>
 
 Lookup holidays dates for any country using the <a href = "https://www.abstractapi.com/api/holidays-api">Abstract 
-Holidays API</a>! Current build is v2.2.0.
+Holidays API</a>! Current build is v2.2.1.
+
+![HolidaysSearcher Screenshot](https://user-images.githubusercontent.com/48426647/216824885-6eaef4f1-add3-4559-84ed-da5d9831ac98.png)
 
 <h3>Run Program Instructions</h3>
 
@@ -37,7 +39,7 @@ At the moment users require an <a href = "https://www.abstractapi.com/api/holida
   - Word matcher
   - Help function
 
-<h3>Current Version - v2.2.0</h3>
+<h3>Current Version - v2.2.1</h3>
 
 - Added new menu
 - Moved word matcher and music function to menu
